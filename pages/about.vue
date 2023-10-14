@@ -227,22 +227,13 @@
        
       
 
-        
-        <!-- @@include("partials/footer/footer-one.html") -->
-
-        <!-- @@include("partials/offcanvas-right.html") -->
-        <!-- @@include("partials/switcherbar.html") -->
+     
 
         <!-- Back to top -->
-        <a href="#" onclick="topFunction()" id="back-to-top" class="back-to-top fs-5"><i data-feather="arrow-up" class="fea icon-sm icons align-middle"></i></a>
+        <a href="#" onclick="topFunction()" id="back-to-top" class="back-to-top fs-5">
+            <i data-feather="arrow-up" class="fea icon-sm icons align-middle"></i></a>
         <!-- Back to top -->
 
-        <!-- javascript -->
-        <!-- @@include("partials/vendor-scripts.html") -->
-        <!-- Lightbox -->
-        <!-- <script src="/libs/tobii/js/tobii.min.js"></script> -->
-        <!-- Main Js -->
-        <!-- <script src="/js/plugins.init.js"></script>Note: All init js like tiny slider, counter, countdown, maintenance, lightbox, gallery, swiper slider, aos animation etc. -->
-        <!-- <script src="/js/app.js"></script>Note: All important javascript like page loader, menu, sticky menu, menu-toggler, one page menu etc. -->
+       
     </div>
 </template>
