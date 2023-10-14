@@ -5,9 +5,11 @@
             <div class="header-bar d-flex justify-content-between border-bottom">
                 <div class="d-flex align-items-center">
                     <a href="#" class="logo-icon me-3">
-                        <img src="/images/alog/logo_1-removebg.png"   height="60" alt="">
+                        <img src="/images/alog/logo_1-removebg.png"   height="50" alt="">
+                        <span>Fox<span class="text-primary">vale</span></span>
                         <span class="big">
-                            <img src="/images/alog/logo_1-removebg.png"   height="60" class="logo-light-mode" alt="">
+                            <img src="/images/alog/logo_1-removebg.png"   height="50" class="logo-light-mode" alt="">
+                            <span>Fox<span class="text-primary">vale</span></span>
                             <!-- <img src="/images/alog/logo_1-removebg.png"    height="60" class="logo-dark-mode" alt=""> -->
                         </span>
                     </a>

@@ -8,10 +8,13 @@
                 <a href="#">
                     <!-- <img src="/images/alog/logo_1-removebg.png"  height="60"  alt=""> -->
                     <!-- <img src="/images/logo-light.png" height="24" class="logo-dark-mode" alt=""> -->
-                    <span class="sidebar-colored ">
-                        <div class="logo-header mt-2 mx-4">
-                            <img src="/images/alog/logo_1-removebg.png"   height="50" alt="">
-                            <span>Fox<span class="text-primary">vale</span></span>
+                    <span class="sidebar-colored">
+                        <div class="center">
+
+                            <div class="logo-header mt-2">
+                                <img src="/images/alog/logo_1-removebg.png"   height="50" alt="">
+                            </div>
+                            <span class="mx-2 text-white mt-2">Fox<span class="text-primary">vale</span></span>
                         </div>
                     </span>
                 </a>
@@ -92,8 +95,16 @@ export default{
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 9999px;
+}
+
+
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
 }
 </style>
