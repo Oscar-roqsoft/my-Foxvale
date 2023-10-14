@@ -1,0 +1,98 @@
+<template>
+      
+    
+    <!-- sidebar-wrapper -->
+    <nav id="sidebar" class="sidebar-wrapper sidebar-dark">
+        <div class="sidebar-content" data-simplebar >
+            <div class="sidebar-brand">
+                <a href="#">
+                    <!-- <img src="/images/alog/logo_1-removebg.png"  height="60"  alt=""> -->
+                    <!-- <img src="/images/logo-light.png" height="24" class="logo-dark-mode" alt=""> -->
+                    <span class="sidebar-colored ">
+                        <div class="logo-header mt-2 mx-4">
+                            <img src="/images/alog/logo_1-removebg.png"   height="60" alt="">
+                        </div>
+                    </span>
+                </a>
+            </div>
+            
+            <ul class="sidebar-menu">
+                <li><nuxt-link to="/dashboard/" ><i class="ti ti-home me-2"></i>Dashboard</nuxt-link></li>
+                <li><nuxt-link to="/dashboard/profile"><i class="ti ti-user me-2"></i>Profile Settings</nuxt-link></li>
+                <li v-if="!isAdmin"><nuxt-link to="/dashboard/subscription"><i class="ti ti-file-info me-2"></i>Subscriptions</nuxt-link></li>
+                <li v-if="!isAdmin"><nuxt-link to="/dashboard/privacy"><i class="ti ti-home me-2"></i>Privacy Policy</nuxt-link></li>
+                
+                <li class="sidebar-dropdown" v-if="isAdmin">
+                    <a href="javascript:void(0)"><i class="ti ti-brand-gravatar me-2"></i>User Management</a>
+                    <div class="sidebar-submenu">
+                        <ul>
+                            <li><nuxt-link to="/dashboard/allUser" >All Users</nuxt-link></li>
+                            <li><nuxt-link to="/dashboard/allUser" >Add User</nuxt-link></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="sidebar-dropdown" v-if="isAdmin">
+                    <a href="javascript:void(0)"><i class="ti ti-shopping-cart me-2"></i>Packages</a>
+                    <div class="sidebar-submenu">
+                        <ul>
+                            <li><a href="#">All Packages</a></li>
+                            <li><a href="#">Add Package</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            <!-- sidebar-menu  -->
+        </div>
+    </nav>
+    <!-- sidebar-wrapper  -->
+</template>
+
+ 
+
+<script setup>
+
+
+  import {useStore}  from "@/stores/mystore"
+
+  const user = useStore()
+
+  const isAdmin = computed(() => {
+        return  user.status == "admin"
+      })
+
+  console.log(user.isAdmin)
+
+
+</script>
+
+<!-- <script>
+import {user} from "@/composables/mixins";
+export default{
+    computed:{
+        user(){
+            return user
+        },
+        isAdmin(){
+            return user.status == "admin"
+        }
+    }
+}
+
+</script> -->
+<style scoped>
+
+.sidebar-content{
+    overflow: hidden !important;
+}
+
+
+.logo-header{
+    background:#fff;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 9999px;
+}
+</style>
