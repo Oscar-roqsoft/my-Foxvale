@@ -10,7 +10,8 @@
                     <!-- <img src="/images/logo-light.png" height="24" class="logo-dark-mode" alt=""> -->
                     <span class="sidebar-colored ">
                         <div class="logo-header mt-2 mx-4">
-                            <img src="/images/alog/logo_1-removebg.png"   height="60" alt="">
+                            <img src="/images/alog/logo_1-removebg.png"   height="50" alt="">
+                            <span>Fox<span class="text-primary">vale</span></span>
                         </div>
                     </span>
                 </a>

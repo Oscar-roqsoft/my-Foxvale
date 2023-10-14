@@ -1,7 +1,6 @@
 <template>
 
     <div>
-     
         <!-- Hero Start -->
         <section class="bg-half-260 bg-primary d-table w-100" style="background: url('/images/enterprise.png') center center;">
             <div class="bg-overlay"></div>
@@ -343,7 +342,7 @@
                 </div><!--end row-->
             </div><!--end container-->
 
-            <div class="row my-md-5 pt-md-3 my-4 pt-2 pb-lg-4 justify-content-center">
+            <div class=" my-md-5  my-4 pt-2  justify-content-center">
                 <div class="col-12 text-center">
                     <div class="section-title">
                         <h4 class="title mb-4">Have Question ? Get in touch!</h4>
@@ -373,9 +372,9 @@
 
         <!-- <cookiePopup/> -->
 
-        <offcanvas/>
+        <!-- <offcanvas/> -->
          
-        <switcherbar/>
+        <!-- <switcherbar/> -->
         
     </div>
 

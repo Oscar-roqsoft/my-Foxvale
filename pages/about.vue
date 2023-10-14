@@ -86,9 +86,8 @@
 
             <div class="container mt-100 mt-60">
                 <div class="row align-items-center">
-                   
 
-                    <div class="col-lg-6 col-md-7 mt-5 mt-sm-0">
+                    <div class="col-md-6 mt-5 mt-sm-0">
                         <div class="section-title">
                             <h1 class="title mb-3">The Foxvale Broker advantage</h1>
                             <!-- <p class="para-desc text-muted">Launch your campaign and benefit from our 
@@ -136,8 +135,8 @@
                         </div>
                     </div><!--end col-->
 
-                    <div class="col-lg-6 col-md-5">
-                        <div class="app-feature-shape-left position-relative">
+                    <div class=" col-md-6">
+                        <div class="">
                             <div class="text-center text-md-center">
                                 <img src="/images/app/classic02.png" class="img-fluid" alt="">
                             </div>
@@ -148,7 +147,7 @@
 
 
             <div class="container mt-100 mt-60">
-                    <div class="row justify-content-center">
+                    <div class=" justify-content-center">
                         <div class="col-12 text-center">
                             <div class="section-title mb-4 pb-2">
                                 <h4 class="title mb-4">See everything about your 
@@ -196,33 +195,6 @@
                     </div><!--end row-->
                 </div><!--end container-->
 
-            <div class="container mt-4">
-                <div class="row justify-content-center">
-                    <div class="col-lg-2 col-md-2 col-6 text-center pt-4">
-                        <img src="/images/client/amazon.svg" class="avatar avatar-ex-sm" alt="">
-                    </div><!--end col-->
-
-                    <div class="col-lg-2 col-md-2 col-6 text-center pt-4">
-                        <img src="/images/client/google.svg" class="avatar avatar-ex-sm" alt="">
-                    </div><!--end col-->
-                    
-                    <div class="col-lg-2 col-md-2 col-6 text-center pt-4">
-                        <img src="/images/client/lenovo.svg" class="avatar avatar-ex-sm" alt="">
-                    </div><!--end col-->
-                    
-                    <div class="col-lg-2 col-md-2 col-6 text-center pt-4">
-                        <img src="/images/client/paypal.svg" class="avatar avatar-ex-sm" alt="">
-                    </div><!--end col-->
-                    
-                    <div class="col-lg-2 col-md-2 col-6 text-center pt-4">
-                        <img src="/images/client/shopify.svg" class="avatar avatar-ex-sm" alt="">
-                    </div><!--end col-->
-                    
-                    <div class="col-lg-2 col-md-2 col-6 text-center pt-4">
-                        <img src="/images/client/spotify.svg" class="avatar avatar-ex-sm" alt="">
-                    </div><!--end col-->
-                </div><!--end row-->
-            </div><!--end container-->
         </section><!--end section-->
        
       
