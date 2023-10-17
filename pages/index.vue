@@ -2,7 +2,7 @@
 
     <div>
         <!-- Hero Start -->
-        <section class="bg-half-260 bg-primary d-table w-100" style="background: url('/images/enterprise.png') center center;">
+        <section class="bg-half-260 bg-primary d-table w-100" style="background: url('/images/modern01.jpg') center center;">
             <div class="bg-overlay"></div>
             <div class="container">
                 <div class="row">
@@ -57,19 +57,30 @@
                         </div>
                     </div><!--end col-->
 
-                    <div class="col-lg-6 col-md-6 mt-4 pt-2 mt-sm-0 pt-sm-0">
-                        <img src="/images/digital/seo.gif" class="img-fluid" alt="">
+                    <div class="col-lg-5 col-md-5">
+                        <div class="position-relative">
+                            <img src="/images/blog/03.jpg" class="rounded img-fluid mx-auto d-block" alt="">
+                        </div>
                     </div><!--end col-->
                 </div><!--end row-->
             </div><!--end container-->
 
             <div class="container mt-100 mt-60">
                 <div class="row align-items-center">
-                    <div class="col-lg-6 col-md-6 col-12 order-2 order-md-1 mt-4 mt-sm-0 pt-2 pt-sm-0">
-                        <img src="/images/illustrator/app.svg" alt="">
+                    <div class="col-lg-5 col-md-5">
+                        <div class="position-relative">
+                            <img src="/images/company/about.jpg" class="rounded img-fluid mx-auto d-block" alt="">
+                        </div>
                     </div><!--end col-->
+                    <!-- <div class="col-lg-6 col-md-6 mt-4 order-2  order-md-1 mt-sm-0 pt-sm-0">
+                        <div class="position-relative">
+                            <img src="/images/busi01.jpg" class="rounded img-fluid mx-auto d-block" alt="">
+                          
+                        </div>
+                    </div> -->
+                    <!--end col-->
 
-                    <div class="col-lg-6 col-md-6 col-12 order-1 order-md-2">
+                    <div class="col-lg-6 col-md-6 col-12 order-1 order-md-2 mr-md-4">
                         <div class="section-title">
                             <h4 class="title mb-4">Unlock the potential<br> of your money</h4>
                             <p class="text-muted">Take the first step in reaching your financial goals .We offer 
@@ -176,7 +187,7 @@
                 <div class="row justify-content-center">
                     <div class="col-12 text-center">
                         <div class="section-title mb-4 pb-2">
-                            <h4 class="title mb-4">ACCOUNT HOSTING BUNDLES</h4>
+                            <h4 class="title mb-4">ASSET HOSTING BUNDLES</h4>
                             <!-- <p class="text-muted para-desc mb-0 mx-auto">.</p> -->
                         </div>
                     </div><!--end col-->
@@ -187,83 +198,15 @@
                     
                     <div class="col-lg-3 col-md-6 col-12 mt-4 pt-2">
                         <div class="card pricing pricing-primary business-rate shadow border-0 rounded">
-                            <!-- <div class="ribbon ribbon-right ribbon-warning overflow-hidden"><span class="text-center d-block shadow small h6">Best</span></div> -->
-                            <div class="card-body">
-                                <h6 class="title name  text-uppercase mb-4">Standard</h6>
-                                <div class="d-flex mb-4">
-                                    <span class="h1 mb-0 text-primary ">*</span>
-                                    <span class=" h1 mb-0 text-primary">*</span>
-                                </div>
-
-                                <ul class="list-unstyled d-flex mb-0 ps-0">
-                                    <li class="h6 text-muted mb-0"><span class="icon h5 me-2">
-                                        </span>$1,000</li>
-                                    <li class="h6 text-muted mb-0"><span class="icon h5 me-2">
-                                        </span>-</li>
-                                    <li class="h6 text-muted mb-0"><span class="icon h5 me-2">
-                                        </span>$9,999</li>
-                                </ul>
-
-                                <ul class="list-unstyled d-flex mb-0 ps-0">
-                                    <li class="h6 text-muted mb-0"><span class="icon h5 me-2">
-                                        </span>10%</li>
-                                    <li class="h6 text-muted mb-0"><span class="icon h5 me-2">
-                                        </span>ROI</li>
-                                    <li class="h6 text-muted mb-0"><span class="icon h5 me-2">
-                                        </span>(weekly)</li>
-                                </ul>
-
-
-                               
-                                <a href="javascript:void(0)" class="btn btn-primary mt-4">Get Started</a>
-                            </div>
-                        </div>
-                    </div><!--end col-->
-                    
-                    <div class="col-lg-3 col-md-6 col-12 mt-4 pt-2">
-                        <div class="card pricing pricing-primary business-rate shadow bg-light border-0 rounded">
-                            <div class="card-body">
-                                <h6 class="title name fw-bold text-uppercase mb-4">Deluxe</h6>
-                                <div class="d-flex mb-4">
-                                    <span class="h1 mb-0 text-primary ">*</span>
-                                    <span class=" h1 mb-0 text-primary">*</span>
-                                    <span class="h1 mb-0 text-primary">*</span>
-                                </div>
-                                
-                                <ul class="list-unstyled d-flex mb-0 ps-0">
-                                    <li class="h6 text-muted mb-0"><span class="icon h5 me-2">
-                                        </span>$10,000</li>
-                                    <li class="h6 text-muted mb-0"><span class="icon h5 me-2">
-                                       </span>-</li>
-                                    <li class="h6 text-muted mb-0"><span class="icon h5 me-2">
-                                       </span>$49,999</li>
-                                </ul>
-
-                                <ul class="list-unstyled d-flex mb-0 ps-0">
-                                    <li class="h6 text-muted mb-0"><span class="icon h5 me-2">
-                                       </span>7.5%</li>
-                                    <li class="h6 text-muted mb-0"><span class="icon h5 me-2">
-                                       </span>ROI</li>
-                                    <li class="h6 text-muted mb-0"><span class="icon h5 me-2">
-                                       </span>(weekly)</li>
-                                </ul>
-
-                                <a href="javascript:void(0)" class="btn btn-primary mt-4">Get Started</a>
-                            </div>
-                        </div>
-                    </div><!--end col-->
-                    
-                    <div class="col-lg-3 col-md-6 col-12 mt-4 pt-2">
-                        <div class="card pricing pricing-primary business-rate shadow border-0 rounded">
                             <div class="ribbon ribbon-right ribbon-warning overflow-hidden"><span class="text-center d-block shadow small h6">Best</span></div>
                             <div class="card-body">
                                 <h6 class="title name  text-uppercase mb-4">Premium</h6>
                                 <div class="d-flex mb-4">
-                                    <span class="h1 mb-0 text-primary ">*</span>
-                                    <span class=" h1 mb-0 text-primary">*</span>
-                                    <span class="h1 mb-0 text-primary">*</span>
-                                    <span class="h1 mb-0 text-primary ">*</span>
-                                    <span class=" h1 mb-0 text-primary">*</span>
+                                    <span class="h1 mb-0 text-warning"><i data-feather="star" class="icons"></i></span>
+                                    <span class=" h1 mb-0 text-warning"><i data-feather="star" class="icons"></i></span>
+                                    <span class="h1 mb-0 text-warning"><i data-feather="star" class="icons"></i></span>
+                                    <span class="h1 mb-0 text-warning"><i data-feather="star" class="icons"></i></span>
+                                    <span class=" h1 mb-0 text-warning"><i data-feather="star" class="icons"></i></span>
                                 </div>
 
                                 <ul class="list-unstyled d-flex mb-0 ps-0">
@@ -277,7 +220,7 @@
 
                                 <ul class="list-unstyled d-flex mb-0 ps-0">
                                     <li class="h6 text-muted mb-0"><span class="icon h5 me-2">
-                                        </span>5%</li>
+                                        </span>10%</li>
                                     <li class="h6 text-muted mb-0"><span class="icon h5 me-2">
                                         </span>ROI</li>
                                     <li class="h6 text-muted mb-0"><span class="icon h5 me-2">
@@ -287,6 +230,75 @@
 
                                
                                 <a href="javascript:void(0)" class="btn btn-primary mt-4">Try It Now</a>
+                            </div>
+                        </div>
+                    </div><!--end col-->
+                    
+                    
+                    <div class="col-lg-3 col-md-6 col-12 mt-4 pt-2">
+                        <div class="card pricing pricing-primary business-rate shadow bg-light border-0 rounded">
+                            <div class="card-body">
+                                <h6 class="title name fw-bold text-uppercase mb-4">Deluxe</h6>
+                                <div class="d-flex mb-4">
+                                    <span class="h1 mb-0 text-warning"><i data-feather="star" class="icons"></i></span>
+                                    <span class=" h1 mb-0 text-warning"><i data-feather="star" class="icons"></i></span>
+                                    <span class="h1 mb-0 text-warning"><i data-feather="star" class="icons"></i></span>
+                                </div>
+                                
+                                <ul class="list-unstyled d-flex mb-0 ps-0">
+                                    <li class="h6 text-muted mb-0"><span class="icon h5 me-2">
+                                    </span>$10,000</li>
+                                    <li class="h6 text-muted mb-0"><span class="icon h5 me-2">
+                                    </span>-</li>
+                                    <li class="h6 text-muted mb-0"><span class="icon h5 me-2">
+                                    </span>$49,999</li>
+                                </ul>
+                                
+                                <ul class="list-unstyled d-flex mb-0 ps-0">
+                                    <li class="h6 text-muted mb-0"><span class="icon h5 me-2">
+                                    </span>7.5%</li>
+                                    <li class="h6 text-muted mb-0"><span class="icon h5 me-2">
+                                    </span>ROI</li>
+                                    <li class="h6 text-muted mb-0"><span class="icon h5 me-2">
+                                    </span>(weekly)</li>
+                                </ul>
+                                
+                                <a href="javascript:void(0)" class="btn btn-primary mt-4">Get Started</a>
+                            </div>
+                        </div>
+                    </div><!--end col-->
+
+                    <div class="col-lg-3 col-md-6 col-12 mt-4 pt-2">
+                        <div class="card pricing pricing-primary business-rate shadow border-0 rounded">
+                            <!-- <div class="ribbon ribbon-right ribbon-warning overflow-hidden"><span class="text-center d-block shadow small h6">Best</span></div> -->
+                            <div class="card-body">
+                                <h6 class="title name  text-uppercase mb-4">Standard</h6>
+                                <div class="d-flex mb-4">
+                                    <span class="h1 mb-0 text-warning"><i data-feather="star" class="icons"></i></span>
+                                    <span class=" h1 mb-0 text-warning"><i data-feather="star" class="icons"></i></span>
+                                </div>
+    
+                                <ul class="list-unstyled d-flex mb-0 ps-0">
+                                    <li class="h6 text-muted mb-0"><span class="icon h5 me-2">
+                                        </span>$1,000</li>
+                                    <li class="h6 text-muted mb-0"><span class="icon h5 me-2">
+                                        </span>-</li>
+                                    <li class="h6 text-muted mb-0"><span class="icon h5 me-2">
+                                        </span>$9,999</li>
+                                </ul>
+    
+                                <ul class="list-unstyled d-flex mb-0 ps-0">
+                                    <li class="h6 text-muted mb-0"><span class="icon h5 me-2">
+                                        </span>5%</li>
+                                    <li class="h6 text-muted mb-0"><span class="icon h5 me-2">
+                                        </span>ROI</li>
+                                    <li class="h6 text-muted mb-0"><span class="icon h5 me-2">
+                                        </span>(weekly)</li>
+                                </ul>
+    
+    
+                               
+                                <a href="javascript:void(0)" class="btn btn-primary mt-4">Get Started</a>
                             </div>
                         </div>
                     </div><!--end col-->

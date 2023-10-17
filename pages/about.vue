@@ -21,7 +21,7 @@
                         <ul class="breadcrumb rounded shadow mb-0 px-4 py-2">
                             <li class="breadcrumb-item"><nuxt-link to="/">Foxvale</nuxt-link></li>
                             <!-- <li class="breadcrumb-item"><a href="#">Company</a></li> -->
-                            <li class="breadcrumb-item active" aria-current="page">Aboutus</li>
+                            <li class="breadcrumb-item active" aria-current="page">About us</li>
                         </ul>
                     </nav>
                 </div>

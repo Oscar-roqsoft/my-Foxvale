@@ -61,7 +61,7 @@
   const user = useStore()
 
   const isAdmin = computed(() => {
-        return  user.status == "admin"
+        return  user.status == "user"
       })
 
   console.log(user.isAdmin)

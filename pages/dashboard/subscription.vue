@@ -34,89 +34,21 @@
                                
 
                                 <div class="row ">
-                                
-                                    
-                                    <div class="col-lg-3 col-md-6 col-12 mt-4 pt-2">
-                                        <div class="card pricing pricing-primary business-rate shadow border-0 rounded">
-                                            <!-- <div class="ribbon ribbon-right ribbon-warning overflow-hidden"><span class="text-center d-block shadow small h6">Best</span></div> -->
-                                            <div class="card-body">
-                                                <h6 class="title name  text-uppercase mb-4">Standard</h6>
-                                                <div class="d-flex mb-4">
-                                                    <span class="h1 mb-0 text-primary ">*</span>
-                                                    <span class=" h1 mb-0 text-primary">*</span>
-                                                </div>
-
-                                                <ul class="list-unstyled d-flex mb-0 ps-0">
-                                                    <li class="h6 text-muted mb-0"><span class="icon h5 me-2">
-                                                        </span>$1,000</li>
-                                                    <li class="h6 text-muted mb-0"><span class="icon h5 me-2">
-                                                        </span>-</li>
-                                                    <li class="h6 text-muted mb-0"><span class="icon h5 me-2">
-                                                        </span>$9,999</li>
-                                                </ul>
-
-                                                <ul class="list-unstyled d-flex mb-0 ps-0">
-                                                    <li class="h6 text-muted mb-0"><span class="icon h5 me-2">
-                                                        </span>10%</li>
-                                                    <li class="h6 text-muted mb-0"><span class="icon h5 me-2">
-                                                        </span>ROI</li>
-                                                    <li class="h6 text-muted mb-0"><span class="icon h5 me-2">
-                                                        </span>(weekly)</li>
-                                                </ul>
-
-
-                                            
-                                                <a href="javascript:void(0)" class="btn btn-primary mt-4">Get Started</a>
-                                            </div>
-                                        </div>
-                                    </div><!--end col-->
-                                    
-                                    <div class="col-lg-3 col-md-6 col-12 mt-4 pt-2">
-                                        <div class="card pricing pricing-primary business-rate shadow bg-light border-0 rounded">
-                                            <div class="card-body">
-                                                <h6 class="title name fw-bold text-uppercase mb-4">Deluxe</h6>
-                                                <div class="d-flex mb-4">
-                                                    <span class="h1 mb-0 text-primary ">*</span>
-                                                    <span class=" h1 mb-0 text-primary">*</span>
-                                                    <span class="h1 mb-0 text-primary">*</span>
-                                                </div>
-                                                
-                                                <ul class="list-unstyled d-flex mb-0 ps-0">
-                                                    <li class="h6 text-muted mb-0"><span class="icon h5 me-2">
-                                                        </span>$10,000</li>
-                                                    <li class="h6 text-muted mb-0"><span class="icon h5 me-2">
-                                                    </span>-</li>
-                                                    <li class="h6 text-muted mb-0"><span class="icon h5 me-2">
-                                                    </span>$49,999</li>
-                                                </ul>
-
-                                                <ul class="list-unstyled d-flex mb-0 ps-0">
-                                                    <li class="h6 text-muted mb-0"><span class="icon h5 me-2">
-                                                    </span>7.5%</li>
-                                                    <li class="h6 text-muted mb-0"><span class="icon h5 me-2">
-                                                    </span>ROI</li>
-                                                    <li class="h6 text-muted mb-0"><span class="icon h5 me-2">
-                                                    </span>(weekly)</li>
-                                                </ul>
-
-                                                <a href="javascript:void(0)" class="btn btn-primary mt-4">Get Started</a>
-                                            </div>
-                                        </div>
-                                    </div><!--end col-->
-                                    
+                   
+                    
                                     <div class="col-lg-3 col-md-6 col-12 mt-4 pt-2">
                                         <div class="card pricing pricing-primary business-rate shadow border-0 rounded">
                                             <div class="ribbon ribbon-right ribbon-warning overflow-hidden"><span class="text-center d-block shadow small h6">Best</span></div>
                                             <div class="card-body">
                                                 <h6 class="title name  text-uppercase mb-4">Premium</h6>
                                                 <div class="d-flex mb-4">
-                                                    <span class="h1 mb-0 text-primary ">*</span>
-                                                    <span class=" h1 mb-0 text-primary">*</span>
-                                                    <span class="h1 mb-0 text-primary">*</span>
-                                                    <span class="h1 mb-0 text-primary ">*</span>
-                                                    <span class=" h1 mb-0 text-primary">*</span>
+                                                    <span class="h1 mb-0 text-warning"><i data-feather="star" class="icons"></i></span>
+                                                    <span class=" h1 mb-0 text-warning"><i data-feather="star" class="icons"></i></span>
+                                                    <span class="h1 mb-0 text-warning"><i data-feather="star" class="icons"></i></span>
+                                                    <span class="h1 mb-0 text-warning"><i data-feather="star" class="icons"></i></span>
+                                                    <span class=" h1 mb-0 text-warning"><i data-feather="star" class="icons"></i></span>
                                                 </div>
-
+                
                                                 <ul class="list-unstyled d-flex mb-0 ps-0">
                                                     <li class="h6 text-muted mb-0"><span class="icon h5 me-2">
                                                         </span>$50,000</li>
@@ -125,7 +57,76 @@
                                                     <li class="h6 text-muted mb-0"><span class="icon h5 me-2">
                                                         </span>$100,000</li>
                                                 </ul>
-
+                
+                                                <ul class="list-unstyled d-flex mb-0 ps-0">
+                                                    <li class="h6 text-muted mb-0"><span class="icon h5 me-2">
+                                                        </span>10%</li>
+                                                    <li class="h6 text-muted mb-0"><span class="icon h5 me-2">
+                                                        </span>ROI</li>
+                                                    <li class="h6 text-muted mb-0"><span class="icon h5 me-2">
+                                                        </span>(weekly)</li>
+                                                </ul>
+                
+                
+                                               
+                                                <a href="javascript:void(0)" class="btn btn-primary mt-4">Try It Now</a>
+                                            </div>
+                                        </div>
+                                    </div><!--end col-->
+                                    
+                                    
+                                    <div class="col-lg-3 col-md-6 col-12 mt-4 pt-2">
+                                        <div class="card pricing pricing-primary business-rate shadow bg-light border-0 rounded">
+                                            <div class="card-body">
+                                                <h6 class="title name fw-bold text-uppercase mb-4">Deluxe</h6>
+                                                <div class="d-flex mb-4">
+                                                    <span class="h1 mb-0 text-warning"><i data-feather="star" class="icons"></i></span>
+                                                    <span class=" h1 mb-0 text-warning"><i data-feather="star" class="icons"></i></span>
+                                                    <span class="h1 mb-0 text-warning"><i data-feather="star" class="icons"></i></span>
+                                                </div>
+                                                
+                                                <ul class="list-unstyled d-flex mb-0 ps-0">
+                                                    <li class="h6 text-muted mb-0"><span class="icon h5 me-2">
+                                                    </span>$10,000</li>
+                                                    <li class="h6 text-muted mb-0"><span class="icon h5 me-2">
+                                                    </span>-</li>
+                                                    <li class="h6 text-muted mb-0"><span class="icon h5 me-2">
+                                                    </span>$49,999</li>
+                                                </ul>
+                                                
+                                                <ul class="list-unstyled d-flex mb-0 ps-0">
+                                                    <li class="h6 text-muted mb-0"><span class="icon h5 me-2">
+                                                    </span>7.5%</li>
+                                                    <li class="h6 text-muted mb-0"><span class="icon h5 me-2">
+                                                    </span>ROI</li>
+                                                    <li class="h6 text-muted mb-0"><span class="icon h5 me-2">
+                                                    </span>(weekly)</li>
+                                                </ul>
+                                                
+                                                <a href="javascript:void(0)" class="btn btn-primary mt-4">Get Started</a>
+                                            </div>
+                                        </div>
+                                    </div><!--end col-->
+                
+                                    <div class="col-lg-3 col-md-6 col-12 mt-4 pt-2">
+                                        <div class="card pricing pricing-primary business-rate shadow border-0 rounded">
+                                            <!-- <div class="ribbon ribbon-right ribbon-warning overflow-hidden"><span class="text-center d-block shadow small h6">Best</span></div> -->
+                                            <div class="card-body">
+                                                <h6 class="title name  text-uppercase mb-4">Standard</h6>
+                                                <div class="d-flex mb-4">
+                                                    <span class="h1 mb-0 text-warning"><i data-feather="star" class="icons"></i></span>
+                                                    <span class=" h1 mb-0 text-warning"><i data-feather="star" class="icons"></i></span>
+                                                </div>
+                    
+                                                <ul class="list-unstyled d-flex mb-0 ps-0">
+                                                    <li class="h6 text-muted mb-0"><span class="icon h5 me-2">
+                                                        </span>$1,000</li>
+                                                    <li class="h6 text-muted mb-0"><span class="icon h5 me-2">
+                                                        </span>-</li>
+                                                    <li class="h6 text-muted mb-0"><span class="icon h5 me-2">
+                                                        </span>$9,999</li>
+                                                </ul>
+                    
                                                 <ul class="list-unstyled d-flex mb-0 ps-0">
                                                     <li class="h6 text-muted mb-0"><span class="icon h5 me-2">
                                                         </span>5%</li>
@@ -134,10 +135,10 @@
                                                     <li class="h6 text-muted mb-0"><span class="icon h5 me-2">
                                                         </span>(weekly)</li>
                                                 </ul>
-
-
-                                            
-                                                <a href="javascript:void(0)" class="btn btn-primary mt-4">Try It Now</a>
+                    
+                    
+                                               
+                                                <a href="javascript:void(0)" class="btn btn-primary mt-4">Get Started</a>
                                             </div>
                                         </div>
                                     </div><!--end col-->

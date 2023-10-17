@@ -67,22 +67,7 @@
                                             </div>
                                         </div><!--end col-->
 
-                                        <div class="col-lg-12 mt-4 text-center">
-                                            <h6>Or Login With</h6>
-                                            <div class="row">
-                                                <div class="col-6 mt-3">
-                                                    <div class="d-grid">
-                                                        <a href="javascript:void(0)" class="btn btn-light"><i class="mdi mdi-facebook text-primary"></i> Facebook</a>
-                                                    </div>
-                                                </div><!--end col-->
-                                                
-                                                <div class="col-6 mt-3">
-                                                    <div class="d-grid">
-                                                        <a href="javascript:void(0)" class="btn btn-light"><i class="mdi mdi-google text-danger"></i> Google</a>
-                                                    </div>
-                                                </div><!--end col-->
-                                            </div>
-                                        </div><!--end col-->
+                                       
 
                                         <div class="col-12 text-center">
                                             <p class="mb-0 mt-3"><small class="text-dark me-2">
@@ -105,3 +90,4 @@
 
     
 </template>
+
