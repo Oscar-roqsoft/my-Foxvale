@@ -61,7 +61,7 @@
   const user = useStore()
 
   const isAdmin = computed(() => {
-        return  user.status == "user"
+        return  user.status == "admin"
       })
 
   console.log(user.isAdmin)
@@ -107,4 +107,4 @@ export default{
     justify-content: center;
     margin-bottom: 10px;
 }
-</style>
+</style>~/stores

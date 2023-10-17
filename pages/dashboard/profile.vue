@@ -189,4 +189,4 @@ const isAdmin = computed(() => {
         return  user.status == "admin"
       })
 
-</script>
+</script>~/stores

@@ -70,4 +70,4 @@ const user = useStore()
 
 <!-- <style scoped>
 @import url( '/css/style.min.css');
-</style> -->
+</style> -->~/stores

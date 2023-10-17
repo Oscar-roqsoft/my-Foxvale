@@ -16,11 +16,12 @@
                             <img src="/images/user/login.svg" class="img-fluid d-block mx-auto" alt="">
                         </div>
                     </div>
+
                     <div class="col-lg-5 col-md-6">
                         <div class="card login-page shadow rounded border-0">
                             <div class="card-body">
                                 <h4 class="card-title text-center">Login</h4>  
-                                <form class="login-form mt-4">
+                                <form class="login-form mt-4" @submit.prevent="null">
                                     <div class="row">
                                         <div class="col-lg-12">
                                             <div class="mb-3">
@@ -30,7 +31,7 @@
                                                     <i data-feather="user" class="fea icon-sm icons">
 
                                                     </i>
-                                                    <input type="email" class="form-control ps-5" 
+                                                    <input type="email" class="form-control ps-5" v-model.trim="email"
                                                     placeholder="Email" name="email" required>
                                                 </div>
                                             </div>
@@ -41,7 +42,7 @@
                                                 <label class="form-label">Password <span class="text-danger">*</span></label>
                                                 <div class="form-icon position-relative">
                                                     <i data-feather="key" class="fea icon-sm icons"></i>
-                                                    <input type="password" class="form-control ps-5" 
+                                                    <input type="password" class="form-control ps-5" v-model.trim="password"
                                                     placeholder="Password" required>
                                                 </div>
                                             </div>
@@ -58,12 +59,13 @@
                                                 </div>
                                                 <p class="forgot-pass mb-0">
                                                     <nuxt-link to="/recoverPassword"  class="text-dark fw-bold">Forgot password ?</nuxt-link></p>
-                                            </div>
+                                             </div>
                                         </div><!--end col-->
 
                                         <div class="col-lg-12 mb-0">
                                             <div class="d-grid">
-                                                <button class="btn btn-primary">Sign in</button>
+                                                <div class="text-danger text-center mb-4" v-if="message.length">{{ message }}</div>
+                                                <button @click.prevent="login()" :disabled="isLoading" class="btn btn-primary" type="button">Sign in</button>
                                             </div>
                                         </div><!--end col-->
 
@@ -79,6 +81,8 @@
                             </div>
                         </div><!---->
                     </div> <!--end col-->
+                     
+
                 </div><!--end row-->
             </div> <!--end container-->
         </section><!--end section-->
@@ -90,4 +94,61 @@
 
     
 </template>
+
+<script setup>
+    import {useStore}  from "@/stores/index";
+    import {validateEmail,baseURL} from "@/composables/mixins";
+
+    const pinia = useStore();
+
+    // get user input to model
+    const email = ref("");
+    const password = ref("");
+    const message = ref("");
+    const isLoading = ref(false);
+
+    const login = async()=>{
+        // validate if the email is valid
+        if(!validateEmail(email.value)) return message.value = "Invalid email address";
+
+        // validate password
+        if(password.value.length < 6) return message.value = "Password must be atleast 6 characters long!";
+
+        const userLoginInfo = {
+            email: email.value,
+            password: password.value
+        }
+
+        // login the user
+        try{
+            message.value = "";
+            isLoading.value = true;
+            // fetch the data
+            const data = await fetch(`${baseURL}/auth/login-admin`,{
+                method: "POST",
+                body: JSON.stringify(userLoginInfo)
+            }).then(res=>res.json());
+
+            isLoading.value = false;
+             
+            // return error or success message 
+            console.log(data)
+            if(!data.status) return message.value = data.message;
+
+            console.log(data)
+
+            // store user login data to pina
+            const userInfo = data.data;
+            pinia.storeUser(userInfo);
+
+            // take the user to the dashboard
+            const router = useRouter();
+            router.push("/dashboard");
+        }catch(e){
+            message.value = e.message;
+        }
+    }
+    
+
+</script>
 
