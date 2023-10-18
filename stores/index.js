@@ -23,6 +23,7 @@ export const useStore = defineStore('user',()=> {
         storeUser,
         signOut
     }
+    // persist: true,
 })
   
 

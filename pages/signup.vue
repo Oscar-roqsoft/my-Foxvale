@@ -20,14 +20,14 @@
                         <div class="card shadow rounded border-0">
                             <div class="card-body">
                                 <h4 class="card-title text-center">Signup</h4>  
-                                <form class="login-form mt-4">
+                                <form class="login-form mt-4" @submit.prevent="null">
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="mb-3">
                                                 <label class="form-label">First name <span class="text-danger">*</span></label>
                                                 <div class="form-icon position-relative">
                                                     <i data-feather="user" class="fea icon-sm icons"></i>
-                                                    <input type="text" class="form-control ps-5" 
+                                                    <input type="text" class="form-control ps-5" v-model.trim="firstName"
                                                     placeholder="First Name" name="s" required>
                                                 </div>
                                             </div>
@@ -38,7 +38,7 @@
                                                 <label class="form-label">Last name <span class="text-danger">*</span></label>
                                                 <div class="form-icon position-relative">
                                                     <i data-feather="user-check" class="fea icon-sm icons"></i>
-                                                    <input type="text" class="form-control ps-5" 
+                                                    <input type="text" class="form-control ps-5" v-model.trim="lastName"
                                                     placeholder="Last Name" name="s" required>
                                                 </div>
                                             </div>
@@ -49,7 +49,7 @@
                                                 <label class="form-label">Your Email <span class="text-danger">*</span></label>
                                                 <div class="form-icon position-relative">
                                                     <i data-feather="mail" class="fea icon-sm icons"></i>
-                                                    <input type="email" class="form-control ps-5" 
+                                                    <input type="email" class="form-control ps-5" v-model.trim="email"
                                                     placeholder="Email" name="email" required>
                                                 </div>
                                             </div>
@@ -60,7 +60,7 @@
                                                 <label class="form-label">Password <span class="text-danger">*</span></label>
                                                 <div class="form-icon position-relative">
                                                     <i data-feather="key" class="fea icon-sm icons"></i>
-                                                    <input type="password" class="form-control ps-5" 
+                                                    <input type="password" class="form-control ps-5" v-model.trim="password"
                                                     placeholder="Password" required>
                                                 </div>
                                             </div>
@@ -77,6 +77,7 @@
 
                                         <div class="col-md-12">
                                             <div class="d-grid">
+                                                <div class="text-center text-danger">{{ message }}</div>
                                                 <button class="btn btn-primary">Register</button>
                                             </div>
                                         </div><!--end col-->
@@ -86,7 +87,7 @@
                                         <div class="mx-auto">
                                             <p class="mb-0 mt-3"><small class="text-dark me-2">
                                                 Already have an account ?</small> 
-                                                <nuxt-link to="/login" class="text-dark fw-bold">Sign in</nuxt-link></p>
+                                                <button @click.prevent="signup()" class="text-dark fw-bold" type="button">Sign in</button></p>
                                         </div>
                                     </div><!--end row-->
                                 </form>
@@ -99,3 +100,53 @@
         <!-- Hero End -->
     </div>
 </template>
+
+
+<script setup>
+    import {useStore}  from "@/stores/index";
+    import {validateEmail,baseURL} from "@/composables/mixins";
+
+    const message =ref("")
+
+    // get user input values
+    const firstName = ref("")
+    const lastName = ref("")
+    const email = ref("")
+    const password = ref("")
+
+
+    const signup =async()=>{
+        //  validate if the email is valid
+        if (!validateEmail(email.value)) return message.value="email not valid";
+        
+        if(password.length<6) return message.value ="password length must be more than 6 values";
+
+        const userSignupInfo ={
+           firstName: firstName.value,
+           lastName: lastName.value,
+           email:email.value,
+           password:password.value,
+
+        }
+        
+        
+        try{
+            // fetch data
+            const data = await fetch("baseURL/",{
+                method:"POST",
+                body: JSON.stringify(userSignupInfo)
+            }).then(res=>res.json())
+
+
+            const userInfo = data.data;
+            pinia.storeUser(userInfo)
+
+            navigateTo("/dashboard")
+
+        }catch(e){
+           message.value = e.message 
+        }
+
+    }
+    
+ </script>

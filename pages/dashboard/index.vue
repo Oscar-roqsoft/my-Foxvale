@@ -56,7 +56,7 @@ definePageMeta({
     layout:"custom",
 })
 
-import {useStore}  from "@/stores/mystore"
+import {useStore}  from "@/stores/index"
 
 const user = useStore()
 
@@ -66,8 +66,3 @@ const user = useStore()
 
 </script>
 
-
-
-<!-- <style scoped>
-@import url( '/css/style.min.css');
-</style> -->~/stores
