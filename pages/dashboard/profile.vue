@@ -177,7 +177,7 @@ definePageMeta({
     layout:"custom"
 })
 
-import {useStore}  from "@/stores/mystore"
+import {useStore}  from "@/stores/index"
 
 
 
