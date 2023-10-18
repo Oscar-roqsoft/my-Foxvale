@@ -50,7 +50,7 @@
 
 
 <script setup>
-  import {useStore}  from "@/stores/mystore"
+  import {useStore}  from "@/stores/index"
 
   const user = useStore()
 
