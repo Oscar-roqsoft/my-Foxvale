@@ -4,8 +4,8 @@
         <div class="container">
             <!-- Logo container-->
             <a class="logo" href="/">
-                <img src="/images/alog/logo_1-removebg.png" height="50" class="logo-light-mode" alt="">
-                <img src="/images/alog/logo_1-removebg.png" height="50" class="logo-dark-mode" alt="">
+                <img src="/images/alog/logo_1-removebg.png" height="43" class="logo-light-mode" alt="">
+                <img src="/images/alog/logo_1-removebg.png" height="43" class="logo-dark-mode" alt="">
                 <span>Fox<span class="text-primary">vale</span></span>
             </a>                
             <!-- Logo End -->

@@ -2,7 +2,7 @@
 
     <div>
         <!-- Hero Start -->
-        <section class="bg-half-260 bg-primary d-table w-100" style="background: url('/images/modern01.jpg') center center;">
+        <section class="bg-half-260 bg-primary d-table w-100" style="background: url('/images/modern01.jpg') right center;">
             <div class="bg-overlay"></div>
             <div class="container">
                 <div class="row">
@@ -50,14 +50,10 @@
                             <p class="para-desc text-muted">Foxvale Broker is the technology and liquidity provider
                                 for the world's first ethical broker that donates more than 65% of its profits to
                                 charity and micro-lenders every year.</p>
-                            <div class="mt-4 pt-2">
-                                <a href="javascript:void(0)" class="btn btn-pills btn-primary m-1">Get Started</a>
-                                <!-- <a href="#!" data-type="youtube" data-id="yba7hPeTSjk" class="btn btn-icon btn-pills btn-primary m-1 lightbox"><i data-feather="video" class="icons"></i></a><span class="fw-bold text-uppercase small align-middle ms-1">Watch Now</span> -->
-                            </div>
                         </div>
                     </div><!--end col-->
 
-                    <div class="col-lg-5 col-md-5">
+                    <div class="col-lg-5 col-md-5 mt-2">
                         <div class="position-relative">
                             <img src="/images/blog/03.jpg" class="rounded img-fluid mx-auto d-block" alt="">
                         </div>
@@ -67,18 +63,12 @@
 
             <div class="container mt-100 mt-60">
                 <div class="row align-items-center">
-                    <div class="col-lg-5 col-md-5">
+                    <div class="col-lg-5 col-md-5 order-2 mt-4  order-md-1 ">
                         <div class="position-relative">
                             <img src="/images/company/about.jpg" class="rounded img-fluid mx-auto d-block" alt="">
                         </div>
                     </div><!--end col-->
-                    <!-- <div class="col-lg-6 col-md-6 mt-4 order-2  order-md-1 mt-sm-0 pt-sm-0">
-                        <div class="position-relative">
-                            <img src="/images/busi01.jpg" class="rounded img-fluid mx-auto d-block" alt="">
-                          
-                        </div>
-                    </div> -->
-                    <!--end col-->
+                  
 
                     <div class="col-lg-6 col-md-6 col-12 order-1 order-md-2 mr-md-4">
                         <div class="section-title">
@@ -88,7 +78,6 @@
                                 financial markets.We offer a wide range of products and comprehensive customers services
                                 to provide our client a complete and innovative cooperation experince.
                             </p>
-                            <a href="javascript:void(0)" class="btn btn-primary">Find More <i data-feather="arrow-right" class="fea icon-sm"></i></a>
                         </div>
                     </div><!--end col-->
                 </div><!--end row-->
