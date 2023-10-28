@@ -1,19 +1,30 @@
 <template>
 
     <div>
+        <!-- Loader -->
+        <!-- <div id="preloader">
+            <div id="status">
+                <div class="spinner">
+                    <div class="double-bounce1"></div>
+                    <div class="double-bounce2"></div>
+                </div>
+            </div>
+        </div> -->
+        <!-- Loader -->
 
         <div class="page-wrapper toggled">
-          <sidebar/>
+           <sidebar/>
 
             <!-- Start Page Content -->
             <main class="page-content bg-light">
                 <!-- Top Header -->
-               <Topheader/>
+               <topheader/>
+                <!-- Top Header -->
 
                 <div class="container-fluid">
                     <div class="layout-specing">
                         <div class="d-md-flex justify-content-between align-items-center">
-                            <h5 class="mb-0">Profile Setting</h5>
+                            <h5 class="mb-0">Profile</h5>
 
                             <nav aria-label="breadcrumb" class="d-inline-block mt-2 mt-sm-0">
                                 <ul class="breadcrumb bg-transparent rounded mb-0 p-0">
@@ -22,153 +33,81 @@
                                 </ul>
                             </nav>
                         </div>
-                    
-                        <div class="row">
-                            <div class="col-lg-5 mt-4">
-                                <div class="card border-0 rounded shadow">
-                                    <div class="card-body">
-                                        <h5 class="text-md-start text-center mb-0">Personal Detail :</h5>
-        
-                                        <div class="mt-4 text-md-start text-center d-sm-flex">
-                                            <img src="/images/client/05.jpg" class="avatar float-md-left avatar-medium rounded-circle shadow me-md-4" alt="">
-                                            
-                                           
-                                        </div>
-        
-                                        <form>
-                                            <div class="row mt-4">
-                                                <div class="col-md-6">
-                                                    <div class="mb-3">
-                                                        <label class="form-label">First Name</label>
-                                                        <div class="form-icon position-relative">
-                                                            <i data-feather="user" class="fea icon-sm icons"></i>
-                                                            <input name="name" id="first" type="text" class="form-control ps-5" placeholder="First Name :">
+
+                        <div class="row mt-4">
+                            <div class="col-12">
+                                <div class="">
+                                    <div class="row ">
+                                        
+                                        <div class="col-lg-7 col-md-6  order-md-2 order-lg-1 order-2">
+                                            <div class="card border-0 rounded shadow p-4">
+                                                <div class=" text-center p-4 ">
+                                                    <img src="assets/images/client/05.jpg" class="rounded-circle shadow avatar avatar-md-md mx-auto" alt="">
+                                                    <h5 class="mt-3 mb-0">Cristina Julia</h5>
+                                                    <div class="mt-4">
+                                                        <button  @click="navigateTo('/dashboard/editProfile')" class="btn btn-primary">Update Account</button>
+                                                    </div><!--end col-->
+                                                </div>
+                                                <h5 class="mb-0">Personal Details :</h5>
+                                                <div class="mt-4">
+                                                    <div class="d-flex align-items-center">
+                                                        <i data-feather="mail" class="fea icon-ex-md text-muted me-3"></i>
+                                                        <div class="flex-1">
+                                                            <h6 class="text-primary mb-0">Email :</h6>
+                                                            <a href="javascript:void(0)" class="text-muted">cristinajulia@mail.com</a>
                                                         </div>
                                                     </div>
-                                                </div><!--end col-->
-                                                <div class="col-md-6">
-                                                    <div class="mb-3">
-                                                        <label class="form-label">Last Name</label>
-                                                        <div class="form-icon position-relative">
-                                                            <i data-feather="user-check" class="fea icon-sm icons"></i>
-                                                            <input name="name" id="last" type="text" class="form-control ps-5" placeholder="Last Name :">
+                                                 
+                                                  
+                                                    <div class="d-flex align-items-center mt-3">
+                                                        <i data-feather="gift" class="fea icon-ex-md text-muted me-3"></i>
+                                                        <div class="flex-1">
+                                                            <h6 class="text-primary mb-0">Birthday :</h6>
+                                                            <p class="text-muted mb-0">2nd March, 1996</p>
                                                         </div>
                                                     </div>
-                                                </div><!--end col-->
-                                                <div class="col-md-6">
-                                                    <div class="mb-3">
-                                                        <label class="form-label">Your Email</label>
-                                                        <div class="form-icon position-relative">
-                                                            <i data-feather="mail" class="fea icon-sm icons"></i>
-                                                            <input name="email" id="email" type="email" class="form-control ps-5" placeholder="Your email :">
+                                                    <div class="d-flex align-items-center mt-3">
+                                                        <i data-feather="map-pin" class="fea icon-ex-md text-muted me-3"></i>
+                                                        <div class="flex-1">
+                                                            <h6 class="text-primary mb-0">Location :</h6>
+                                                            <a href="javascript:void(0)" class="text-muted">Beijing, China</a>
                                                         </div>
-                                                    </div> 
-                                                </div><!--end col-->
-                                                <div class="col-md-6">
-                                                    <div class="mb-3">
-                                                        <label class="form-label">Occupation</label>
-                                                        <div class="form-icon position-relative">
-                                                            <i data-feather="bookmark" class="fea icon-sm icons"></i>
-                                                            <input name="name" id="occupation" type="text" class="form-control ps-5" placeholder="Occupation :">
-                                                        </div>
-                                                    </div> 
-                                                </div><!--end col-->
-                                                <div class="col-lg-12">
-                                                    <div class="mb-3">
-                                                        <label class="form-label">Description</label>
-                                                        <div class="form-icon position-relative">
-                                                            <i data-feather="message-circle" class="fea icon-sm icons"></i>
-                                                            <textarea name="comments" id="comments" rows="4" class="form-control ps-5" placeholder="Description :"></textarea>
+                                                    </div>
+                                                    <div class="d-flex align-items-center mt-3">
+                                                        <i data-feather="phone" class="fea icon-ex-md text-muted me-3"></i>
+                                                        <div class="flex-1">
+                                                            <h6 class="text-primary mb-0">Cell No :</h6>
+                                                            <a href="javascript:void(0)" class="text-muted">(+12) 1254-56-4896</a>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div><!--end row-->
-                                            <div class="row">
-                                                <div class="col-sm-12">
-                                                    <input type="submit" id="submit" name="send" class="btn btn-primary" value="Save Changes">
-                                                </div><!--end col-->
-                                            </div><!--end row-->
-                                        </form><!--end form-->
-                                    </div>
-                                </div>
-
-                               
-                            </div><!--end col-->
-
-                            <div class="col-lg-5 mt-4">
-                                <div class="card border-0 rounded shadow p-4">
-                                    <h5 class="mb-0">Change password :</h5>
-                                    <form>
-                                        <div class="row mt-4">
-                                            <div class="col-lg-12">
-                                                <div class="mb-3">
-                                                    <label class="form-label">Old password :</label>
-                                                    <div class="form-icon position-relative">
-                                                        <i data-feather="key" class="fea icon-sm icons"></i>
-                                                        <input type="password" class="form-control ps-5" placeholder="Old password" required>
-                                                    </div>
-
-                                                </div>
-                                            </div><!--end col-->
-        
-                                            <div class="col-lg-12">
-                                                <div class="mb-3">
-                                                    <label class="form-label">New password :</label>
-                                                    <div class="form-icon position-relative">
-                                                        <i data-feather="key" class="fea icon-sm icons"></i>
-                                                        <input type="password" class="form-control ps-5" placeholder="New password" required>
-                                                    </div>
-                                                </div>
-                                            </div><!--end col-->
-        
-                                            <div class="col-lg-12">
-                                                <div class="mb-3">
-                                                    <label class="form-label">Re-type New password :</label>
-                                                    <div class="form-icon position-relative">
-                                                        <i data-feather="key" class="fea icon-sm icons"></i>
-                                                        <input type="password" class="form-control ps-5" placeholder="Re-type New password" required>
-                                                    </div>
-                                                </div>
-                                            </div><!--end col-->
-        
-                                            <div class="col-lg-12 mt-2 mb-0">
-                                                <button class="btn btn-primary">Save password</button>
-                                            </div><!--end col-->
-                                        </div><!--end row-->
-                                    </form>
-                                </div>
-
-
-                                <div class="card border-0 rounded shadow p-4 mt-4" v-if="!isAdmin">
-                                    <h5 class="mb-0 text-danger">Delete Account :</h5>
-        
-                                    <div class="mt-4">
-                                        <h6 class="mb-0">Do you want to delete the account? Please press below "Delete" button</h6>
-                                        <div class="mt-4">
-                                            <button class="btn btn-danger">Delete Account</button>
+                                            </div>
+            
+            
+                                                    
+                                                    
+                                                    
                                         </div><!--end col-->
                                     </div>
                                 </div>
-                              
                             </div><!--end col-->
-
-
                         </div><!--end row-->
+
                     </div>
                 </div><!--end container-->
 
-                <footer2/>
+               
                 <!-- End -->
             </main>
             <!--End page-content" -->
         </div>
         <!-- page-wrapper -->
 
-      
+       
         
     </div>
-</template>
 
+</template>
 
 
 <script setup>
@@ -176,17 +115,4 @@
 definePageMeta({
     layout:"custom"
 })
-
-import {useStore}  from "@/stores/index"
-
-
-
-
-const user = useStore()
-
-
-const isAdmin = computed(() => {
-        return  user.status == "admin"
-      })
-
-</script>~/stores
+</script>

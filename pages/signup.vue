@@ -77,8 +77,11 @@
 
                                         <div class="col-md-12">
                                             <div class="d-grid">
-                                                <div class="text-center text-danger">{{ message }}</div>
-                                                <button class="btn btn-primary">Register</button>
+                                                <div class="text-center text-danger" v-if="message.length">{{ message }}</div>
+                                                <button  @click.prevent="signup()" class="btn btn-primary" :disabled="isLoading">
+                                                    <span v-if="!isLoading">Register</span>
+                                                    <btnLoader v-else/>
+                                                </button>
                                             </div>
                                         </div><!--end col-->
 
@@ -87,7 +90,7 @@
                                         <div class="mx-auto">
                                             <p class="mb-0 mt-3"><small class="text-dark me-2">
                                                 Already have an account ?</small> 
-                                                <button @click.prevent="signup()" class="text-dark fw-bold" type="button">Sign in</button></p>
+                                                <button class=" btn text-primary" type="button">Sign in</button></p>
                                         </div>
                                     </div><!--end row-->
                                 </form>
@@ -107,41 +110,55 @@
     import {validateEmail,baseURL} from "@/composables/mixins";
 
     const message =ref("")
-
+     const pinia = useStore()
     // get user input values
     const firstName = ref("")
     const lastName = ref("")
     const email = ref("")
     const password = ref("")
 
+    const isLoading =ref(false)
+
 
     const signup =async()=>{
         //  validate if the email is valid
-        if (!validateEmail(email.value)) return message.value="email not valid";
+        if(!validateEmail(email.value)) return message.value = "Invalid email address";
         
-        if(password.length<6) return message.value ="password length must be more than 6 values";
+        if(password.length < 6) return message.value ="password length must be more than 6 values";
 
         const userSignupInfo ={
-           firstName: firstName.value,
-           lastName: lastName.value,
+           name:firstName.value +' '+ lastName.value,
            email:email.value,
            password:password.value,
 
         }
         
-        
         try{
-            // fetch data
-            const data = await fetch("baseURL/",{
+            // fetch 
+            console.log(userSignupInfo)
+             message.value = "";
+            isLoading.value = true
+            const data = await fetch(`${baseURL}/auth/register`,{
                 method:"POST",
-                body: JSON.stringify(userSignupInfo)
+                headers: {
+                    "Content-Type":"application/json"
+                }, 
+                body: JSON.stringify(userSignupInfo)  //we use JSON.stringify to convert to display the values of userSignupInfo as strings
             }).then(res=>res.json())
 
+            isLoading.value   = false
+           console.log(data)
 
-            const userInfo = data.data;
-            pinia.storeUser(userInfo)
+            if(!data.status) return message.value = data.message;
 
-            navigateTo("/dashboard")
+            const userInfo = ref(data);
+          
+              console.log(userInfo)
+              pinia.storeUser(userInfo);
+
+
+            const router = useRouter();
+            router.push("/dashboard");
 
         }catch(e){
            message.value = e.message 

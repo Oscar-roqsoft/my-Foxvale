@@ -65,7 +65,10 @@
                                         <div class="col-lg-12 mb-0">
                                             <div class="d-grid">
                                                 <div class="text-danger text-center mb-4" v-if="message.length">{{ message }}</div>
-                                                <button @click.prevent="login()" :disabled="isLoading" class="btn btn-primary" type="button">Sign in</button>
+                                                <button @click.prevent="login()" :disabled="isLoading" class="btn btn-primary" type="button">
+                                                    <span v-if="!isLoading">Sign in</span>
+                                                    <btnLoader v-else/>
+                                                </button>
                                             </div>
                                         </div><!--end col-->
 
@@ -121,11 +124,15 @@
 
         // login the user
         try{ 
+            console.log(userLoginInfo)
             message.value = "";
             isLoading.value = true;
             // fetch the data
-            const data = await fetch(`${baseURL}/auth/login-admin`,{
+            const data = await fetch(`${baseURL}/auth/login`,{
                 method: "POST",
+                headers: {
+                    "Content-Type":"application/json"
+                },
                 body: JSON.stringify(userLoginInfo)
             }).then(res=>res.json());
 
@@ -133,9 +140,10 @@
              
             // return error or success message 
             console.log(data)
+
+            // check if the status is true  (if its true you be login  using router.push to the user dashboard)
             if(!data.status) return message.value = data.message;
 
-            console.log(data)
 
             // store user login data to pina
             const userInfo = data.data;
@@ -149,6 +157,6 @@
         }
     }
     
-
+ 
 </script>
 

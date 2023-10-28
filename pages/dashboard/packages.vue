@@ -1,6 +1,4 @@
 <template>
-     
-    <div>
       
 
         <div class="page-wrapper toggled">
@@ -17,18 +15,20 @@
                 <div class="container-fluid">
                     <div class="layout-specing">
                         <div class="d-md-flex justify-content-between align-items-center">
-                            <h5 class="mb-0">Pricing</h5>
+                            <h5 class=" mb-0">Pricing</h5>
 
                             <nav aria-label="breadcrumb" class="d-inline-block mt-2 mt-sm-0">
+
                                 <ul class="breadcrumb bg-transparent rounded mb-0 p-0">
                                     <li class="breadcrumb-item text-capitalize"><nuxt-link to="/dashboard" href="index.html">Foxvale</nuxt-link></li>
                                     <li class="breadcrumb-item text-capitalize active" aria-current="page">Pricing</li>
                                 </ul>
+                                
                             </nav>
+
                         </div>
                     
                         
-                          
                         <!-- Price start -->
                         <section class="section">
                             <div class="container place-items-center">
@@ -71,7 +71,7 @@
                 
                 
                                                
-                                                <a href="javascript:void(0)" class="btn btn-primary mt-4">Try It Out</a>
+                                                <a href="javascript:void(0)" class="btn btn-primary mt-4">Edit plan</a>
                                             </div>
                                         </div>
                                     </div><!--end col-->
@@ -89,7 +89,7 @@
                     </div>
                 </div><!--end container-->
 
-                <!-- <footer2/> -->
+                <footer2/>
                 <!-- End -->
             </main>
             <!--End page-content" -->
@@ -97,7 +97,6 @@
         <!-- page-wrapper -->
         
        
-    </div>
     
 </template>
 
@@ -105,6 +104,7 @@
 definePageMeta({
     layout:"custom"
 })
+
 
 const assetPlan = [
     {

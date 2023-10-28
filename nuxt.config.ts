@@ -1,11 +1,16 @@
  // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: false },
+  ssr:true,
+  pages:true,
+  compeonents:true,
 
   modules: [
     // ...
     '@pinia/nuxt',
+    '@vueuse/nuxt',
   ],
+ 
 
   
   css: [
@@ -31,8 +36,8 @@ export default defineNuxtConfig({
     head: {
       link:[
         // {href:"landing/libs/@iconscout/unicons/css/line.css" , rel:"stylesheet",type:"text/css"},
-
-        // {href:"dashboard/libs/@iconscout/unicons/css/line.css" , rel:"stylesheet",type:"text/css"},
+        { href:"/dashboard/css/icons.min.css", rel:"stylesheet", type:"text/css"},
+        {href:"/dashboard/libs/@iconscout/unicons/css/line.css" , rel:"stylesheet",type:"text/css"},
         {href:"/dashboard/libs/tobii/css/tobii.min.css",rel:"stylesheet",type:"text/css"},
         {href:"/dashboard/libs/simplebar/simplebar.min.css",rel:"stylesheet"}
       ],

@@ -1,29 +1,45 @@
 
 import { defineStore } from 'pinia'
+import { useLocalStorage }   from '@vueuse/core'
+// import {piniaPluginPersistedstate} from 'pinia-plugin-persistedstate'
 
 export const useStore = defineStore('user',()=> {
     // other options...
-    const user = {}
+    const user = ref(
+      useLocalStorage("vueUseUser",{
+
+      })
+)
+ 
    
     // const isAdmin = computed(()=>{
     //     user.status = "admin"
     // })
 
+    // pinia.use(piniaPluginPersistedstate)
+
     const storeUser = (payload)=>{
-        user = payload;
+        user.value = payload;
+        console.log(user.value)
     }
 
     const signOut = ()=>{
-        user = {};
+        user.value = {};
         window.location = "/login";
     }
+    
+   
+   
+
 
     return {
         user,
         storeUser,
-        signOut
+        signOut,
     }
-    // persist: true,
-})
+    // const  (true),
+},
+  {persists:true}
+  )
   
 

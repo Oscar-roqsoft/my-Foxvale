@@ -23,10 +23,10 @@
             <ul class="sidebar-menu">
                 <li><nuxt-link to="/dashboard/" ><i class="ti ti-home me-2"></i>Dashboard</nuxt-link></li>
                 <li><nuxt-link to="/dashboard/profile"><i class="ti ti-user me-2"></i>Profile Settings</nuxt-link></li>
-                <li v-if="!isAdmin"><nuxt-link to="/dashboard/subscription"><i class="ti ti-file-info me-2"></i>Subscriptions</nuxt-link></li>
-                <li v-if="!isAdmin"><nuxt-link to="/dashboard/privacy"><i class="ti ti-home me-2"></i>Privacy Policy</nuxt-link></li>
+                <li v-if="!store.user.isAdmin"><nuxt-link to="/dashboard/subscription"><i class="ti ti-file-info me-2"></i>Subscriptions</nuxt-link></li>
+                <li v-if="!store.user.isAdmin"><nuxt-link to="/dashboard/privacy"><i class="ti ti-home me-2"></i>Privacy Policy</nuxt-link></li>
                 
-                <li class="sidebar-dropdown" v-if="isAdmin">
+                <li class="sidebar-dropdown" v-if="store.user.isAdmin">
                     <a href="javascript:void(0)"><i class="ti ti-brand-gravatar me-2"></i>User Management</a>
                     <div class="sidebar-submenu">
                         <ul>
@@ -35,7 +35,7 @@
                         </ul>
                     </div>
                 </li>
-                <li class="sidebar-dropdown" v-if="isAdmin">
+                <li class="sidebar-dropdown" v-if="store.user.isAdmin">
                     <a href="javascript:void(0)"><i class="ti ti-shopping-cart me-2"></i>Packages</a>
                     <div class="sidebar-submenu">
                         <ul>
@@ -58,35 +58,22 @@
 
   import {useStore}  from "@/stores/index"
 
-  const user = useStore()
+  const store = useStore()
 
-  const isAdmin = computed(() => {
-        return  user.status == "admin"
-      })
+//   const isAdmin = computed(() => {
+//        console.log(store.user.isAdmin)
+//         return  store.user.isAdmin = true
+//       })
 
-  console.log(user.isAdmin)
 
 
 </script>
 
-<!-- <script>
-import {user} from "@/composables/mixins";
-export default{
-    computed:{
-        user(){
-            return user
-        },
-        isAdmin(){
-            return user.status == "admin"
-        }
-    }
-}
 
-</script> -->
 <style scoped>
 
 .sidebar-content{
-    overflow: hidden !important;
+    overflow-y: hidden !important;
 }
 
 
@@ -99,12 +86,11 @@ export default{
     height: 40px;
     border-radius: 9999px;
 }
-
-
 .center{
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 10px;
 }
-</style>~/stores
+
+</style>

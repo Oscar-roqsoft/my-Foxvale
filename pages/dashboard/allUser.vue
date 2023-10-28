@@ -41,7 +41,7 @@
                                             </thead>
                                             <tbody>
                                                 <!-- Start -->
-                                                <tr>
+                                                <tr v-for="i in 4 ">
                                                    <td class="p-3">
                                                         <a href="#" class="text-primary">
                                                             <div class="d-flex align-items-center">
@@ -53,232 +53,17 @@
                                                     <td class="text-center p-3">(+12)85-4521-7568</td>
                                                     <td class="text-center p-3">23th Sept 2021</td>
                                                     <td class="text-center p-3">
-                                                        <div class="badge bg-soft-danger rounded px-3 py-1">
-                                                            Unpaid
+                                                        <div class="badge btn btn-sm bg-primary rounded ">
+                                                         approve
                                                         </div>
                                                     </td>
                                                     <td class="text-end p-3">
-                                                        <a href="invoice.html" class="btn btn-sm btn-primary">Add</a>
+                                                        <a href="#" class="btn btn-sm btn-primary">Add</a>
                                                         <a href="#" class="btn btn-sm btn-danger ms-2">Delete</a>
                                                     </td>
                                                 </tr>
                                                 <!-- End -->
     
-                                                <!-- Start -->
-                                                <tr>
-                                                    <td class="p-3">
-                                                        <a href="#" class="text-primary">
-                                                            <div class="d-flex align-items-center">
-                                                                <img src="/images/client/02.jpg" class="avatar avatar-ex-small rounded-circle shadow" alt="">
-                                                                <span class="ms-2">Wendy Filson</span>
-                                                            </div>
-                                                        </a>
-                                                    </td>
-                                                    <td class="text-center p-3">(+12)85-4521-7568</td>
-                                                    <td class="text-center p-3">11th Sept 2021</td>
-                                                    <td class="text-center p-3">
-                                                        <div class="badge bg-success rounded btn btn-sm">
-                                                            Paid
-                                                        </div>
-                                                    </td>
-                                                    <td class="text-end p-3">
-                                                        <a href="invoice.html" class="btn btn-sm btn-primary">Add</a>
-                                                        <a href="#" class="btn btn-sm btn-danger ms-2">Delete</a>
-                                                    </td>
-                                                </tr>
-                                                <!-- End -->
-    
-                                                <!-- Start -->
-                                                <tr>
-                                                    <td class="p-3">
-                                                        <a href="#" class="text-primary">
-                                                            <div class="d-flex align-items-center">
-                                                                <img src="/images/client/03.jpg" class="avatar avatar-ex-small rounded-circle shadow" alt="">
-                                                                <span class="ms-2">Faye Bridger</span>
-                                                            </div>
-                                                        </a>
-                                                    </td>
-                                                    <td class="text-center p-3">(+12)85-4521-7568</td>
-                                                    <td class="text-center p-3">2nd Sept 2021</td>
-                                                    <td class="text-center p-3">
-                                                        <div class="badge bg-soft-danger rounded px-3 py-1">
-                                                            Unpaid
-                                                        </div>
-                                                    </td>
-                                                    <td class="text-end p-3">
-                                                        <a href="invoice.html" class="btn btn-sm btn-primary">Add</a>
-                                                        <a href="#" class="btn btn-sm btn-danger ms-2">Delete</a>
-                                                    </td>
-                                                </tr>
-                                                <!-- End -->
-    
-                                                <!-- Start -->
-                                                <tr>
-                                                    <td class="p-3">
-                                                        <a href="#" class="text-primary">
-                                                            <div class="d-flex align-items-center">
-                                                                <img src="/images/client/04.jpg" class="avatar avatar-ex-small rounded-circle shadow" alt="">
-                                                                <span class="ms-2">Ronald Curtis</span>
-                                                            </div>
-                                                        </a>
-                                                    </td>
-                                                    <td class="text-center p-3">(+12)85-4521-7568</td>
-                                                    <td class="text-center p-3">1st Sept 2021</td>
-                                                    <td class="text-center p-3">
-                                                        <div class="badge bg-soft-danger rounded px-3 py-1">
-                                                            Unpaid
-                                                        </div>
-                                                    </td>
-                                                    <td class="text-end p-3">
-                                                        <a href="invoice.html" class="btn btn-sm btn-primary">Add</a>
-                                                        <a href="#" class="btn btn-sm btn-danger ms-2">Delete</a>
-                                                    </td>
-                                                </tr>
-                                                <!-- End -->
-    
-                                                <!-- Start -->
-                                                <tr>
-                                                    <td class="p-3">
-                                                        <a href="#" class="text-primary">
-                                                            <div class="d-flex align-items-center">
-                                                                <img src="/images/client/05.jpg" class="avatar avatar-ex-small rounded-circle shadow" alt="">
-                                                                <span class="ms-2">Melissa Hibner</span>
-                                                            </div>
-                                                        </a>
-                                                    </td>
-                                                    <td class="text-center p-3">(+12)85-4521-7568</td>
-                                                    <td class="text-center p-3">1st Sept 2021</td>
-                                                    <td class="text-center p-3">
-                                                        <div class="badge bg-soft-success rounded px-3 py-1">
-                                                            Paid
-                                                        </div>
-                                                    </td>
-                                                    <td class="text-end p-3">
-                                                        <a href="invoice.html" class="btn btn-sm btn-primary">Add</a>
-                                                        <a href="#" class="btn btn-sm btn-danger ms-2">Delete</a>
-                                                    </td>
-                                                </tr>
-                                                <!-- End -->
-    
-                                                <!-- Start -->
-                                                <tr>
-                                                    <td class="p-3">
-                                                        <a href="#" class="text-primary">
-                                                            <div class="d-flex align-items-center">
-                                                                <img src="/images/client/06.jpg" class="avatar avatar-ex-small rounded-circle shadow" alt="">
-                                                                <span class="ms-2">Randall Case</span>
-                                                            </div>
-                                                        </a>
-                                                    </td>
-                                                    <td class="text-center p-3">(+12)85-4521-7568</td>
-                                                    <td class="text-center p-3">28th Aug 2021</td>
-                                                    <td class="text-center p-3">
-                                                        <div class="badge bg-soft-success rounded px-3 py-1">
-                                                            Paid
-                                                        </div>
-                                                    </td>
-                                                    <td class="text-end p-3">
-                                                        <a href="invoice.html" class="btn btn-sm btn-primary">Add</a>
-                                                        <a href="#" class="btn btn-sm btn-danger ms-2">Delete</a>
-                                                    </td>
-                                                </tr>
-                                                <!-- End -->
-    
-                                                <!-- Start -->
-                                                <tr>
-                                                    <td class="p-3">
-                                                        <a href="#" class="text-primary">
-                                                            <div class="d-flex align-items-center">
-                                                                <img src="/images/client/07.jpg" class="avatar avatar-ex-small rounded-circle shadow" alt="">
-                                                                <span class="ms-2">Jerry Morena</span>
-                                                            </div>
-                                                        </a>
-                                                    </td>
-                                                    <td class="text-center p-3">(+12)85-4521-7568</td>
-                                                    <td class="text-center p-3">25th Aug 2021</td>
-                                                    <td class="text-center p-3">
-                                                        <div class="badge bg-soft-danger rounded px-3 py-1">
-                                                            Unpaid
-                                                        </div>
-                                                    </td>
-                                                    <td class="text-end p-3">
-                                                        <a href="invoice.html" class="btn btn-sm btn-primary">Add</a>
-                                                        <a href="#" class="btn btn-sm btn-danger ms-2">Delete</a>
-                                                    </td>
-                                                </tr>
-                                                <!-- End -->
-    
-                                                <!-- Start -->
-                                                <tr>
-                                                    <td class="p-3">
-                                                        <a href="#" class="text-primary">
-                                                            <div class="d-flex align-items-center">
-                                                                <img src="/images/client/08.jpg" class="avatar avatar-ex-small rounded-circle shadow" alt="">
-                                                                <span class="ms-2">Lester McNally</span>
-                                                            </div>
-                                                        </a>
-                                                    </td>
-                                                    <td class="text-center p-3">(+12)85-4521-7568</td>
-                                                    <td class="text-center p-3">20th Aug 2021</td>
-                                                    <td class="text-center p-3">
-                                                        <div class="badge bg-soft-danger rounded px-3 py-1">
-                                                            Unpaid
-                                                        </div>
-                                                    </td>
-                                                    <td class="text-end p-3">
-                                                        <a href="invoice.html" class="btn btn-sm btn-primary">Add</a>
-                                                        <a href="#" class="btn btn-sm btn-danger ms-2">Delete</a>
-                                                    </td>
-                                                </tr>
-                                                <!-- End -->
-    
-                                                <!-- Start -->
-                                                <tr>
-                                                    <td class="p-3">
-                                                        <a href="#" class="text-primary">
-                                                            <div class="d-flex align-items-center">
-                                                                <img src="/images/client/09.jpg" class="avatar avatar-ex-small rounded-circle shadow" alt="">
-                                                                <span class="ms-2">Christopher Burrell</span>
-                                                            </div>
-                                                        </a>
-                                                    </td>
-                                                    <td class="text-center p-3">(+12)85-4521-7568</td>
-                                                    <td class="text-center p-3">15th Aug 2021</td>
-                                                    <td class="text-center p-3">
-                                                        <div class="badge bg-soft-success rounded px-3 py-1">
-                                                            Paid
-                                                        </div>
-                                                    </td>
-                                                    <td class="text-end p-3">
-                                                        <a href="invoice.html" class="btn btn-sm btn-primary">Add</a>
-                                                        <a href="#" class="btn btn-sm btn-danger ms-2">Delete</a>
-                                                    </td>
-                                                </tr>
-                                                <!-- End -->
-    
-                                                <!-- Start -->
-                                                <tr>
-                                                    <td class="p-3">
-                                                        <a href="#" class="text-primary">
-                                                            <div class="d-flex align-items-center">
-                                                                <img src="/images/client/10.jpg" class="avatar avatar-ex-small rounded-circle shadow" alt="">
-                                                                <span class="ms-2">Mary Skeens</span>
-                                                            </div>
-                                                        </a>
-                                                    </td>
-                                                    <td class="text-center p-3">(+12)85-4521-7568</td>
-                                                    <td class="text-center p-3">10th Aug 2021</td>
-                                                    <td class="text-center p-3">
-                                                        <div class="badge bg-soft-danger rounded px-3 py-1">
-                                                            Unpaid
-                                                        </div>
-                                                    </td>
-                                                    <td class="text-end p-3">
-                                                        <a href="invoice.html" class="btn btn-sm btn-primary">Add</a>
-                                                        <a href="#" class="btn btn-sm btn-danger ms-2">Delete</a>
-                                                    </td>
-                                                </tr>
-                                                <!-- End -->
                                             </tbody>
                                         </table>
                                     </div>
@@ -319,6 +104,8 @@
 
 <script setup>
 definePageMeta({
-    layout:"custom"
+    layout:"custom"  
 })
+
+const userList =[{}]
 </script>
