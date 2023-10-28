@@ -31,7 +31,7 @@
                                         <h5 class="text-md-start text-center mb-0">Personal Detail :</h5>
         
                                         <div class="mt-4 text-md-start text-center d-sm-flex">
-                                            <img src="/images/client/05.jpg" class="avatar float-md-left avatar-medium rounded-circle shadow me-md-4" alt="">
+                                            <img :src="store.user.image" class="avatar float-md-left avatar-medium rounded-circle shadow me-md-4" alt="">
                                             
                                         </div>
                                         <div class=" mt-2 mb-0">
@@ -168,7 +168,7 @@
                                 </div>
 
 
-                                <div class="card border-0 rounded shadow p-4 mt-4" v-if="!isAdmin">
+                                <div class="card border-0 rounded shadow p-4 mt-4" v-if="!store.user.isAdmin">
                                     <h5 class="mb-0 text-danger">Delete Account :</h5>
         
                                     <div class="mt-4">
@@ -211,11 +211,8 @@ import {useStore}  from "@/stores/index"
 
 
 
-const user = useStore()
+const store = useStore()
 
 
-const isAdmin = computed(() => {
-        return  user.status == "admin"
-      })
 
 </script>~/stores

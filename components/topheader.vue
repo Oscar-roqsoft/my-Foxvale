@@ -13,7 +13,7 @@
                             <!-- <img src="/images/alog/logo_1-removebg.png"    height="60" class="logo-dark-mode" alt=""> -->
                         </span>
                     </a>
-                    <a id="close-sidebar" class="btn btn-icon btn-soft-light" href="javascript:void(0)">
+                    <a  id="close-sidebar" class="btn btn-icon btn-soft-light" href="javascript:void(0)">
                         <i class="ti ti-menu-2"></i>
                     </a>
                   

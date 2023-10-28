@@ -42,7 +42,7 @@
                                         <div class="col-lg-7 col-md-6  order-md-2 order-lg-1 order-2">
                                             <div class="card border-0 rounded shadow p-4">
                                                 <div class=" text-center p-4 ">
-                                                    <img src="assets/images/client/05.jpg" class="rounded-circle shadow avatar avatar-md-md mx-auto" alt="">
+                                                    <img :src="store.user.image" class="rounded-circle shadow avatar avatar-md-md mx-auto" alt="">
                                                     <h5 class="mt-3 mb-0">Cristina Julia</h5>
                                                     <div class="mt-4">
                                                         <button  @click="navigateTo('/dashboard/editProfile')" class="btn btn-primary">Update Account</button>
@@ -115,4 +115,8 @@
 definePageMeta({
     layout:"custom"
 })
+
+import {useStore} from '@/stores/index'
+
+const store = useStore()
 </script>
