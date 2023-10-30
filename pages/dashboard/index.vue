@@ -1,11 +1,11 @@
-<template>
+  <template>
 
     <div>
        
 
         <div class="page-wrapper toggled">
             <!-- @@include("partials/sidebar-dark.html") -->
-            <Sidebar/>
+            <Sidebar/>  
 
             <!-- Start Page Content -->
             <main class="page-content bg-light">
@@ -21,13 +21,27 @@
                             </div>
 
                         </div>
-                    
-                       
-                        <div class="row  align-items-center">
+                         
+
+                        
+                        <div class="row  align-items-center mx-1 mt-4 ">
+                            <div class="d-flex justify-content-between align-items-start rounded  rounded shadow p-3">
+                                <div class="d-flex justify-content-start align-items-start ">
+                                    <div class="icon-d bg-warning text-white" >
+                                        <i class="uil uil-exclamation fs-4"></i>  
+                                    </div>
+                                    
+    
+                                    <span class="text-dark h6 ms-2">KYC is required : <span class="text-primary">VERIFY YOUR ACCOUNT</span></span>
+                                </div>
+
+                                <i class="uil uil-times  fs-4 text-dark"></i>
+    
+                            </div>
                            
                             
                             <div  class=" mt-4 align-items-center">
-                                <a class=" row align-items-center  rounded shadow mx-2 p-3">
+                                <a class=" row align-items-center  rounded shadow  p-3">
                                     <div v-for="item in btnLinkItems" :key="item" class="d-flex align-items-center justify-content-center col">
                                       
                                         <nuxt-link :to="`/dashboard/${item.link}`" class=" d-flex flex-column  align-items-center justify-content-center">
@@ -40,11 +54,31 @@
                                    
                                 </a>
                             </div><!--end col-->
-                         
                            
                         </div><!--end row-->
 
+                        <div class="row  align-items-center mx-1">
+                           
+                            
+                            <div  class=" mt-4 align-items-center bg-color rounded">
+                                <a class=" row align-items-center   rounded shadow  p-3">
+                                   
+                                   
+                                    <div class="">
+                                          <h6 class="text-white">Referral Link</h6>
 
+                                          <div class="form-icon position-relative">
+                                            <input name="name" id="occupation" type="text" class="form-control ps-5 "  disabled>
+                                          </div>
+                                          <button class="btn btn-sm btn-warning mt-3">copy</button>
+                                          <p class="text-success mt-2">Get a bonus when someone registers <span class="text-white">Foxvale Broker Inc.</span> with the referral link.</p>
+                                    </div>
+                                </a>
+                            </div><!--end col-->
+                           
+                        </div><!--end row-->
+
+                       
                     </div>
 
 
@@ -79,22 +113,37 @@ const store = useStore()
 //     })
 const btnLinkItems = [
     {id:1,title:"deposit",icon:"uil uil-usd-circle fs-4 mb-0",link:"deposit"},
-    {id:2,title:"withdraw",icon:"uil uil-shopping-bag fs-4 mb-0",link:""},
+    {id:2,title:"withdraw",icon:"uil uil-shopping-bag fs-4 mb-0",link:"withdraw"},
     {id:3,title:"invest",icon:"uil uil-chart fs-4 mb-0",link:"subscription"},
    ]
-
 
 
 </script>
 
 
 <style scoped>
+
+
+.icon-d{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: green;
+    height: 20px !important;
+    width: 20px  !important;
+    border-radius: 999px  !important;
+}
+
 .dim{
     height:40px;
     width:40px;
     display: inline-flex;
     justify-content:center;
     align-items:center;
+}
+
+.bg-color{
+    background: rgb(6, 6, 32);
 }
 </style>
 

@@ -101,15 +101,7 @@
                                                         </div>
                                                     </div> 
                                                 </div><!--end col-->
-                                                <!-- <div class="col-lg-12">
-                                                    <div class="mb-3">
-                                                        <label class="form-label">Description</label>
-                                                        <div class="form-icon position-relative">
-                                                            <i data-feather="message-circle" class="fea icon-sm icons"></i>
-                                                            <textarea name="comments" id="comments" rows="4" class="form-control ps-5" placeholder="Description :"></textarea>
-                                                        </div>
-                                                    </div>
-                                                </div> -->
+                                               
                                             </div><!--end row-->
                                             <div class="row">
                                                 <div class="col-sm-12">
@@ -123,64 +115,7 @@
                                
                             </div><!--end col-->
 
-                            <div class="col-lg-5 mt-4">
-                                <div class="card border-0 rounded shadow p-4">
-                                    <h5 class="mb-0">Change password :</h5>
-                                    <form>
-                                        <div class="row mt-4">
-                                            <div class="col-lg-12">
-                                                <div class="mb-3">
-                                                    <label class="form-label">Old password :</label>
-                                                    <div class="form-icon position-relative">
-                                                        <i data-feather="key" class="fea icon-sm icons"></i>
-                                                        <input type="password" class="form-control ps-5" placeholder="Old password" required>
-                                                    </div>
-
-                                                </div>
-                                            </div><!--end col-->
-        
-                                            <div class="col-lg-12">
-                                                <div class="mb-3">
-
-                                                    <label class="form-label">New password :</label>
-                                                    <div class="form-icon position-relative">
-                                                        <i data-feather="key" class="fea icon-sm icons"></i>
-                                                        <input type="password" class="form-control ps-5" placeholder="New password" required>
-                                                    </div>
-                                                </div>
-                                            </div><!--end col-->
-        
-                                            <div class="col-lg-12">
-                                                <div class="mb-3">
-                                                    <label class="form-label">Re-type New password :</label>
-                                                    <div class="form-icon position-relative">
-                                                        <i data-feather="key" class="fea icon-sm icons"></i>
-                                                        <input type="password" class="form-control ps-5" placeholder="Re-type New password" required>
-                                                    </div>
-                                                </div>
-                                            </div><!--end col-->
-        
-                                            <div class="col-lg-12 mt-2 mb-0">
-                                                <button class="btn btn-primary">Save password</button>
-                                            </div><!--end col-->
-                                        </div><!--end row-->
-                                    </form>
-                                </div>
-
-
-                                <div class="card border-0 rounded shadow p-4 mt-4" v-if="!store.user.isAdmin">
-                                    <h5 class="mb-0 text-danger">Delete Account :</h5>
-        
-                                    <div class="mt-4">
-                                        <h6 class="mb-0">Do you want to delete the account? Please press below "Delete" button</h6>
-                                        <div class="mt-4">
-                                            <button class="btn btn-danger">Delete Account</button>
-                                        </div><!--end col-->
-                                    </div>
-                                </div>
-                              
-                            </div><!--end col-->
-
+                           
 
                         </div><!--end row-->
                     </div>
@@ -208,11 +143,33 @@ definePageMeta({
 
 import {useStore}  from "@/stores/index"
 
-
-
+import {baseURL} from "@/composables/mixins"
 
 const store = useStore()
 
+const firstname = ref("")
+const lastname = ref("")
+const birthday = ref("")
+const address = ref("")
+const phoneNo = ref("")
+const document = ref("")
+
+const userInfo = {
+    name: firstname.value +" "+lastname.value,
+    birthday: birthday.value,
+    address: address.value,
+    number: phoneNo.value,
+    idfile:document.value
+}
 
 
-</script>~/stores
+const submitForm = async()=>{
+    try{
+        const data = await fetch("`baseURL/`")
+    }catch(error){
+        console.error("Error:", error);
+    }
+}
+
+
+</script>
