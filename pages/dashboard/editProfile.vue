@@ -13,7 +13,7 @@
                 <div class="container-fluid">
                     <div class="layout-specing">
                         <div class="d-md-flex justify-content-between align-items-center">
-                            <h5 class="mb-0">Profile Setting</h5>
+                            <h5 class="mb-0">Account Setting</h5>
 
                             <nav aria-label="breadcrumb" class="d-inline-block mt-2 mt-sm-0">
                                 <ul class="breadcrumb bg-transparent rounded mb-0 p-0">
@@ -148,44 +148,44 @@ import {validateEmail,baseURL} from "@/composables/mixins";
 
 const store = useStore()
 
-// const firstname = ref("")
-// const lastname = ref("")
-// const birthday = ref("")
-// const address = ref("")
-// const phoneNo = ref("")
-// const document = ref("")
+const firstname = ref("")
+const lastname = ref("")
+const birthday = ref("")
+const address = ref("")
+const phoneNo = ref("")
+const document = ref("")
 
 
 
 
-// const submitForm = async()=>{
-//     // validate if the email is valid
-//     if(!validateEmail(email.value)) return message.value = "Invalid email address";
+const submitForm = async()=>{
+    // validate if the email is valid
+    if(!validateEmail(email.value)) return message.value = "Invalid email address";
     
-//     // validate password
-//     if(password.value.length < 6) return message.value = "Password must be atleast 6 characters long!";
+    // validate password
+    if(password.value.length < 6) return message.value = "Password must be atleast 6 characters long!";
 
-//     const userInfo = {
-//         name: firstname.value +" "+lastname.value,
-//         birthday: birthday.value, 
-//         address: address.value,
-//         number: phoneNo.value,
-//         idfile:document.value
-//     }
-//     try{
+    const userInfo = {
+        name: firstname.value +" "+lastname.value,
+        birthday: birthday.value, 
+        address: address.value,
+        number: phoneNo.value,
+        idfile:document.value
+    }
+    try{
 
-//         const data = await fetch("`baseURL/user/update-user/653796ed51b8df43e4f438dd`",{
-//             method: "UPDATE",
-//                 headers: {
-//                     "Content-Type":"application/json"
-//                 },
-//                 body: JSON.stringify(userInfo)
+        const data = await fetch("`baseURL/user/update-user/653796ed51b8df43e4f438dd`",{
+            method: "UPDATE",
+                headers: {
+                    "Content-Type":"application/json"
+                },
+                body: JSON.stringify(userInfo)
 
-//         }).then(res=>res.json())
-//     }catch(error){
-//         console.error("Error:", error);
-//     }
-// }
+        }).then(res=>res.json())
+    }catch(error){
+        console.error("Error:", error);
+    }
+}
 
 
 </script>

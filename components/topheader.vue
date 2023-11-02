@@ -36,7 +36,7 @@
                                     </div>
                                 </nuxt-link>
                                 <nuxt-link to="/dashboard" class="dropdown-item text-dark" ><span class="mb-0 d-inline-block me-1"><i class="ti ti-home"></i></span> Dashboard</nuxt-link>
-                                <nuxt-link to="/dashboard/profile" class="dropdown-item text-dark"><span class="mb-0 d-inline-block me-1"><i class="ti ti-settings"></i></span> Profile</nuxt-link>
+                                <nuxt-link to="/dashboard/profile" class="dropdown-item text-dark"><span class="mb-0 d-inline-block me-1"><i class="ti ti-settings"></i></span> Account</nuxt-link>
                                 <div class="dropdown-divider border-top"></div>
                                 <button @click="store.signOut()"  class="dropdown-item text-dark"><span class="mb-0 d-inline-block me-1"><i class="ti ti-logout"></i></span> Logout</button>
                             </div>

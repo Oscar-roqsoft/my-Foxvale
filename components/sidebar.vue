@@ -23,10 +23,10 @@
             <ul class="sidebar-menu">
                 <li><nuxt-link to="/dashboard/" ><i class="ti ti-home me-2"></i>Dashboard</nuxt-link></li>
                 <li><nuxt-link to="/dashboard/profile"><i class="ti ti-user me-2"></i>Account Settings</nuxt-link></li>
-                <li v-if="!store.user.isAdmin"><nuxt-link to="/dashboard/subscription"><i class="ti ti-file-info me-2"></i>Subscriptions</nuxt-link></li>
-                <li v-if="!store.user.isAdmin"><nuxt-link to="/dashboard/privacy"><i class="ti ti-home me-2"></i>Privacy Policy</nuxt-link></li>
+                <li v-if="!isAdmin"><nuxt-link to="/dashboard/subscription"><i class="ti ti-file-info me-2"></i>Subscriptions</nuxt-link></li>
+                <li v-if="!isAdmin"><nuxt-link to="/dashboard/privacy"><i class="ti ti-home me-2"></i>Privacy Policy</nuxt-link></li>
                 
-                <li class="sidebar-dropdown" v-if="store.user.isAdmin">
+                <li class="sidebar-dropdown" v-if="isAdmin">
                     <a href="javascript:void(0)"><i class="ti ti-brand-gravatar me-2"></i>User Management</a>
                     <div class="sidebar-submenu">
                         <ul>
@@ -35,7 +35,7 @@
                         </ul>
                     </div>
                 </li>
-                <li class="sidebar-dropdown" v-if="store.user.isAdmin">
+                <li class="sidebar-dropdown" v-if="isAdmin">
                     <a href="javascript:void(0)"><i class="ti ti-shopping-cart me-2"></i>Packages</a>
                     <div class="sidebar-submenu">
                         <ul>
@@ -60,10 +60,10 @@
 
   const store = useStore()
 
-//   const isAdmin = computed(() => {
-//        console.log(store.user.isAdmin)
-//         return  store.user.isAdmin = true
-//       })
+  const isAdmin = computed(() => {
+       console.log(store.user.isAdmin)
+        return  store.user.isAdmin = "true"
+      })
 
 
 
@@ -77,10 +77,10 @@
 }
 
 .show-sidebar{
-    left: 0px;
+    left: 0px !important;
 }
 .hide-sidebar{
-    left:-300px;
+    left:-300px !important;
 }
 
 .logo-header{
