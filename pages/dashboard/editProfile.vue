@@ -155,7 +155,7 @@ const address = ref("")
 const phoneNo = ref("")
 const document = ref("")
 
-
+const form = new FormData();
 
 
 const submitForm = async()=>{
@@ -170,7 +170,7 @@ const submitForm = async()=>{
         birthday: birthday.value, 
         address: address.value,
         number: phoneNo.value,
-        idfile:document.value
+        file:document.value
     }
     try{
 
