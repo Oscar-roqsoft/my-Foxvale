@@ -2,7 +2,7 @@
       
     
     <!-- sidebar-wrapper -->
-    <nav id="sidebar" class="sidebar-wrapper sidebar-dark">
+    <nav id="sidebar" class="sidebar-wrapper sidebar-dark" :class="store.menuOverlay === true ?'show-sidebar':'hide-sidebar'">
         <div class="sidebar-content" data-simplebar >
             <div class="sidebar-brand">
                 <a href="#">
@@ -22,7 +22,7 @@
             
             <ul class="sidebar-menu">
                 <li><nuxt-link to="/dashboard/" ><i class="ti ti-home me-2"></i>Dashboard</nuxt-link></li>
-                <li><nuxt-link to="/dashboard/profile"><i class="ti ti-user me-2"></i>Profile Settings</nuxt-link></li>
+                <li><nuxt-link to="/dashboard/profile"><i class="ti ti-user me-2"></i>Account Settings</nuxt-link></li>
                 <li v-if="!store.user.isAdmin"><nuxt-link to="/dashboard/subscription"><i class="ti ti-file-info me-2"></i>Subscriptions</nuxt-link></li>
                 <li v-if="!store.user.isAdmin"><nuxt-link to="/dashboard/privacy"><i class="ti ti-home me-2"></i>Privacy Policy</nuxt-link></li>
                 
@@ -76,6 +76,12 @@
     overflow-y: hidden !important;
 }
 
+.show-sidebar{
+    left: 0px;
+}
+.hide-sidebar{
+    left:-300px;
+}
 
 .logo-header{
     background:#fff;

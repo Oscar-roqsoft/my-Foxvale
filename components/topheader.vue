@@ -13,13 +13,14 @@
                             <!-- <img src="/images/alog/logo_1-removebg.png"    height="60" class="logo-dark-mode" alt=""> -->
                         </span>
                     </a>
-                    <a  id="close-sidebar" class="btn btn-icon btn-soft-light" href="javascript:void(0)">
+                    <a @click="toggleSidebar"  id="close-sidebar" class="btn btn-icon btn-soft-light" >
+                        <!-- href="javascript:void(0)"  -->
                         <i class="ti ti-menu-2"></i>
                     </a>
                   
                 </div>
 
-                <ul class="list-unstyled mb-0">
+                <ul class="list-unstyled mb-0"> 
                    
                     <li class="list-inline-item mb-0 ms-1">
                         <div class="dropdown dropdown-primary">
@@ -41,7 +42,7 @@
                             </div>
                         </div>
                     </li>
-                </ul>
+                </ul> 
             </div>
     </div>
     <!-- Top Header -->
@@ -54,6 +55,10 @@
 
  
 const store = useStore()
+
+const toggleSidebar =()=>{
+    store.menuOverlay = !store.menuOverlay
+}
 
 // const isAdmin = computed(() => {
 //       return  store.user.isAdmin =  true

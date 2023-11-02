@@ -26,16 +26,16 @@
                         
                         <div class="row  align-items-center mx-1 mt-4 ">
                             <div class="d-flex justify-content-between align-items-start rounded  rounded shadow p-3">
-                                <div class="d-flex justify-content-start align-items-start ">
+                                <div class=" ">
                                     <div class="icon-d bg-warning text-white" >
                                         <i class="uil uil-exclamation fs-4"></i>  
                                     </div>
                                     
     
-                                    <span class="text-dark h6 ms-2">KYC is required : <span class="text-primary">VERIFY YOUR ACCOUNT</span></span>
+                                    <span class="text-dark h6 ms-2 ">KYC is required : <span class="text-primary">VERIFY YOUR ACCOUNT</span></span>
                                 </div>
 
-                                <i class="uil uil-times  fs-4 text-dark"></i>
+                                <i class="uil uil-times  fs-4 text-primary"></i>
     
                             </div>
                            
@@ -108,9 +108,8 @@ import {useStore}  from "@/stores/index"
 
 const store = useStore()
 
-// const isAdmin = computed(() => {
-//       return  store.user.isAdmin =  true
-//     })
+
+
 const btnLinkItems = [
     {id:1,title:"deposit",icon:"uil uil-usd-circle fs-4 mb-0",link:"deposit"},
     {id:2,title:"withdraw",icon:"uil uil-shopping-bag fs-4 mb-0",link:"withdraw"},

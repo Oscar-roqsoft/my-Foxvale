@@ -9,9 +9,10 @@ export const useStore = defineStore('user',()=> {
       useLocalStorage("vueUseUser",{
 
       })
+
 )
  
-   
+    const menuOverlay =ref(false)
     // const isAdmin = computed(()=>{
     //     user.status = "admin"
     // })

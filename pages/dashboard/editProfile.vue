@@ -18,8 +18,8 @@
                             <nav aria-label="breadcrumb" class="d-inline-block mt-2 mt-sm-0">
                                 <ul class="breadcrumb bg-transparent rounded mb-0 p-0">
                                     <li class="breadcrumb-item text-capitalize"><nuxt-link to="/dashboard">Foxvale</nuxt-link></li>
-                                    <li class="breadcrumb-item text-capitalize"><nuxt-link to="/dashboard/profile">Profile</nuxt-link></li>
-                                    <li class="breadcrumb-item text-capitalize active" aria-current="page">Profile Settings</li>
+                                    <li class="breadcrumb-item text-capitalize"><nuxt-link to="/dashboard/profile">Account Details</nuxt-link></li>
+                                    <li class="breadcrumb-item text-capitalize active" aria-current="page">Account Settings</li>
                                 </ul>
                             </nav>
                         </div>
@@ -82,7 +82,7 @@
                                                             <input name="name" id="address" type="text" class="form-control ps-5" placeholder="Address :">
                                                         </div>
                                                     </div> 
-                                                </div><!--end col-->
+                                                </div><!--en d col-->
                                                 <div class="col-md-6">
                                                     <div class="mb-3">
                                                         <label class="form-label">Phone No</label>
@@ -131,6 +131,7 @@
       
         
     </div>
+    
 </template>
 
 
@@ -143,33 +144,48 @@ definePageMeta({
 
 import {useStore}  from "@/stores/index"
 
-import {baseURL} from "@/composables/mixins"
+import {validateEmail,baseURL} from "@/composables/mixins";
 
 const store = useStore()
 
-const firstname = ref("")
-const lastname = ref("")
-const birthday = ref("")
-const address = ref("")
-const phoneNo = ref("")
-const document = ref("")
-
-const userInfo = {
-    name: firstname.value +" "+lastname.value,
-    birthday: birthday.value,
-    address: address.value,
-    number: phoneNo.value,
-    idfile:document.value
-}
+// const firstname = ref("")
+// const lastname = ref("")
+// const birthday = ref("")
+// const address = ref("")
+// const phoneNo = ref("")
+// const document = ref("")
 
 
-const submitForm = async()=>{
-    try{
-        const data = await fetch("`baseURL/`")
-    }catch(error){
-        console.error("Error:", error);
-    }
-}
+
+
+// const submitForm = async()=>{
+//     // validate if the email is valid
+//     if(!validateEmail(email.value)) return message.value = "Invalid email address";
+    
+//     // validate password
+//     if(password.value.length < 6) return message.value = "Password must be atleast 6 characters long!";
+
+//     const userInfo = {
+//         name: firstname.value +" "+lastname.value,
+//         birthday: birthday.value, 
+//         address: address.value,
+//         number: phoneNo.value,
+//         idfile:document.value
+//     }
+//     try{
+
+//         const data = await fetch("`baseURL/user/update-user/653796ed51b8df43e4f438dd`",{
+//             method: "UPDATE",
+//                 headers: {
+//                     "Content-Type":"application/json"
+//                 },
+//                 body: JSON.stringify(userInfo)
+
+//         }).then(res=>res.json())
+//     }catch(error){
+//         console.error("Error:", error);
+//     }
+// }
 
 
 </script>
