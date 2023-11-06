@@ -7,9 +7,8 @@ export const useStore = defineStore('user',()=> {
     // other options...
     const user = ref(
       useLocalStorage("vueUseUser",{
-
+        // isAdmin: true,
       })
-
 )
  
     const menuOverlay =ref(false)

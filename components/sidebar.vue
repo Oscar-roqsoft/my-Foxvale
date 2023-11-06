@@ -2,7 +2,7 @@
       
     
     <!-- sidebar-wrapper -->
-    <nav id="sidebar" class="sidebar-wrapper sidebar-dark" :class="store.menuOverlay === true ?'show-sidebar':'hide-sidebar'">
+    <nav id="sidebar" class="sidebar-wrapper sidebar-dark" :class="store.menuOverlay === true ?'hide-sidebar-lg show-sidebar':'hide-sidebar show-sidebar-lg'">
         <div class="sidebar-content" data-simplebar >
             <div class="sidebar-brand">
                 <a href="#">
@@ -39,8 +39,8 @@
                     <a href="javascript:void(0)"><i class="ti ti-shopping-cart me-2"></i>Packages</a>
                     <div class="sidebar-submenu">
                         <ul>
-                            <li><a href="#">All Packages</a></li>
-                            <li><a href="#">Add Package</a></li>
+                            <li><nuxt-link to="/dashboard/packages">All Packages</nuxt-link></li>
+                            <li><nuxt-link to="/dashboard/packages/createPackage">Add Package</nuxt-link></li>
                         </ul>
                     </div>
                 </li>
@@ -81,6 +81,16 @@
 }
 .hide-sidebar{
     left:-300px !important;
+}
+
+@media (min-width: 1023px) {
+   
+.show-sidebar-lg{
+    left: 0px !important;
+}
+.hide-sidebar-lg{
+    left:-300px !important;
+} 
 }
 
 .logo-header{

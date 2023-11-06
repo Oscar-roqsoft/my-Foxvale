@@ -32,21 +32,21 @@
         
                                         <div class="mt-4 text-md-start text-center d-sm-flex">
                                             <img :src="store.user.image" class="avatar float-md-left avatar-medium rounded-circle shadow me-md-4" alt="">
-                                            
+                                            <input @click="handleImageChange()"  type="file" ref="profileImage" accept="image/png , image/jpeg" hidden/>
                                         </div>
                                         <div class=" mt-2 mb-0">
-                                            <button class="btn btn-primary">Edit profile picture
+                                            <button @click="handleImageClick()" class="btn btn-primary">Edit profile picture
                                                 
                                             </button>
                                         </div><!--end col-->
         
-                                        <form>
+                                        <form @submit.prevent="null">
                                             <div class="row mt-4">
                                                 <div class="col-md-6">
                                                     <div class="mb-3">
                                                         <label class="form-label">First Name</label>
                                                         <div class="form-icon position-relative">
-                                                            <input name="name" id="first" type="text" class="form-control ps-5" placeholder="First Name :">
+                                                            <input name="name" id="first" type="text" class="form-control ps-5" v-model.trim="firstname" placeholder="First Name :">
                                                         </div>
                                                     </div>
                                                 </div><!--end col-->
@@ -54,7 +54,7 @@
                                                     <div class="mb-3">
                                                         <label class="form-label">Last Name</label>
                                                         <div class="form-icon position-relative">
-                                                            <input name="name" id="last" type="text" class="form-control ps-5" placeholder="Last Name :">
+                                                            <input name="name" id="last" type="text" class="form-control ps-5" v-model.trim="lastname" placeholder="Last Name :">
                                                         </div>
                                                     </div>
                                                 </div><!--en'.d col-->
@@ -63,7 +63,7 @@
                                                         <label class="form-label">Your Email</label>
                                                         <div class="form-icon position-relative">
                                                             <i data-feather="mail" class="fea icon-sm icons"></i>
-                                                            <input name="email" id="email" type="email" class="form-control ps-5" placeholder="Your email :">
+                                                            <input name="email" id="email" type="email" class="form-control ps-5"  :placeholder="store.user.email">
                                                         </div>
                                                     </div> 
                                                 </div><!--end col-->
@@ -71,7 +71,7 @@
                                                     <div class="mb-3">
                                                         <label class="form-label">Birthday</label>
                                                         <div class="form-icon position-relative">
-                                                            <input name="name" id="occupation" type="text" class="form-control ps-5" placeholder="Birthday :">
+                                                            <input name="name" id="occupation" type="text" class="form-control ps-5" v-model.trim="birthday" placeholder="Birthday :">
                                                         </div>
                                                     </div> 
                                                 </div><!--end col-->
@@ -79,7 +79,7 @@
                                                     <div class="mb-3">
                                                         <label class="form-label">Address</label>
                                                         <div class="form-icon position-relative">
-                                                            <input name="name" id="address" type="text" class="form-control ps-5" placeholder="Address :">
+                                                            <input name="name" id="address" type="text" class="form-control ps-5" v-model.trim="address" placeholder="Address :">
                                                         </div>
                                                     </div> 
                                                 </div><!--en d col-->
@@ -87,7 +87,7 @@
                                                     <div class="mb-3">
                                                         <label class="form-label">Phone No</label>
                                                         <div class="form-icon position-relative">
-                                                            <input name="number" id="number" type="number" class="form-control ps-5" placeholder="Phone No :">
+                                                            <input name="number" id="number" type="number" class="form-control ps-5" v-model.trim="phoneNo" placeholder="Phone No :">
                                                         </div>
                                                     </div> 
                                                 </div><!--end col-->
@@ -105,7 +105,7 @@
                                             </div><!--end row-->
                                             <div class="row">
                                                 <div class="col-sm-12">
-                                                    <input type="submit" id="submit" name="send" class="btn btn-primary" value="Save Changes">
+                                                    <input type="submit" @click.prevent="submitForm()" id="submit" name="send" class="btn btn-primary" value="Save Changes">
                                                 </div><!--end col-->
                                             </div><!--end row-->
                                         </form><!--end form-->
@@ -148,43 +148,54 @@ import {validateEmail,baseURL} from "@/composables/mixins";
 
 const store = useStore()
 
+const profileImage = ref()
+const selectedImage = ref("")
+const message = ref("")
+
+
 const firstname = ref("")
 const lastname = ref("")
-const birthday = ref("")
+const birthday = ref("") 
 const address = ref("")
 const phoneNo = ref("")
 const document = ref("")
 
-const form = new FormData();
 
 
-const submitForm = async()=>{
-    // validate if the email is valid
-    if(!validateEmail(email.value)) return message.value = "Invalid email address";
+const submitForm = async()=>{ 
+    const form = new FormData()
+    // const fileStream = fs.createReadStream(address.value);
     
-    // validate password
-    if(password.value.length < 6) return message.value = "Password must be atleast 6 characters long!";
+    // form.append('profileImage',selectedImage.value)
+    // form.append('name', firstname.value +" "+lastname.value)
+    // form.append('birthday',birthday.value)
+    form.append('location',address.value)
+    // form.append('phone_number',phoneNo.value)
+    // form.append("file",document.value)
+    const options = {
+    method: 'POST',
+    headers: {
+        // 'content-type': 'application/json',
+        Authorization: '0c7dbb8e-77dc-4ba2-b988-e190673339ca'
+    },
+    body: form,
+    };
 
-    const userInfo = {
-        name: firstname.value +" "+lastname.value,
-        birthday: birthday.value, 
-        address: address.value,
-        number: phoneNo.value,
-        file:document.value
-    }
-    try{
+    fetch('https://api.nftport.xyz/v0/files', options)
+    .then(response => response.json())
+    // .then(response => console.log(response))
+    .catch(err => console.error(err));
+}
 
-        const data = await fetch("`baseURL/user/update-user/653796ed51b8df43e4f438dd`",{
-            method: "UPDATE",
-                headers: {
-                    "Content-Type":"application/json"
-                },
-                body: JSON.stringify(userInfo)
+// handling form image upload
+const handleImageClick = ()=>{
+    profileImage.value.click()
+}
 
-        }).then(res=>res.json())
-    }catch(error){
-        console.error("Error:", error);
-    }
+const handleImageChange =(event)=>{
+//    const file = event.target.file
+//    selectedImage.value = file
+   console.log(event)
 }
 
 

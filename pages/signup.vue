@@ -94,6 +94,7 @@
                                         </div>
                                     </div><!--end row-->
                                 </form>
+                                
                             </div>
                         </div>
                     </div> <!--end col-->
@@ -110,7 +111,7 @@
     import {validateEmail,baseURL} from "@/composables/mixins";
 
     const message =ref("")
-     const pinia = useStore()
+       const pinia = useStore()
     // get user input values
     const firstName = ref("")
     const lastName = ref("")
