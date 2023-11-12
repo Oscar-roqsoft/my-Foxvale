@@ -5,12 +5,10 @@ import { useLocalStorage }   from '@vueuse/core'
 
 export const useStore = defineStore('user',()=> {
     // other options...
-    const user = ref(
-      useLocalStorage("vueUseUser",{
-        // isAdmin: true,
-      })
-)
- 
+    const user = ref({isAdmin: true,})
+
+   const packages = ref({})
+    
     const menuOverlay =ref(false)
     // const isAdmin = computed(()=>{
     //     user.status = "admin"
@@ -21,6 +19,11 @@ export const useStore = defineStore('user',()=> {
     const storeUser = (payload)=>{
         user.value = payload;
         console.log(user.value)
+    }
+
+    const storePackage = (payload)=>{
+        packages.value = payload;
+        console.log(packages.value)
     }
 
     const signOut = ()=>{
@@ -34,12 +37,16 @@ export const useStore = defineStore('user',()=> {
 
     return {
         user,
+        packages,
         storeUser,
+        storePackage,
         signOut,
     }
     // const  (true),
 },
-  {persists:true}
+{persist: {
+  storage: persistedState.localStorage,
+}},
   )
   
 

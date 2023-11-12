@@ -5,6 +5,7 @@
     
 </template>
 
+
 <style scoped>
 .main{
     display: flex;

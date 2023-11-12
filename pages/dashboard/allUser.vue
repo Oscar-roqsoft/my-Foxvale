@@ -34,7 +34,7 @@
                                                 <tr>
                                                     <th class="border-bottom p-3" style="min-width: 220px;">Client Name</th>
                                                     <th class="text-center border-bottom p-3" style="min-width: 200px;">Phone</th>
-                                                    <th class="text-center border-bottom p-3" style="min-width: 150px;">Generate(Dt.)</th>
+                                                    <th class="text-center border-bottom p-3" style="min-width: 150px;">Generate</th>
                                                     <th class="text-center border-bottom p-3">Actions</th>
                                                     <th class="text-end border-bottom p-3" style="min-width: 200px;"></th>
                                                 </tr>
@@ -96,10 +96,9 @@
             </div>
             <!-- page-wrapper -->
     
-       
-            
            
     </div>
+
 </template>
 
 <script setup>

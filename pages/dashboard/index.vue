@@ -25,7 +25,7 @@
 
                         
                         <div class="row  align-items-center mx-1 mt-4 ">
-                            <div class="d-flex justify-content-between align-items-start rounded  rounded shadow p-3">
+                            <div class="d-flex justify-content-between align-items-start rounded  rounded shadow p-3" v-if="!store.user.isAdmin">
                                 <div class=" ">
                                     <div class="icon-d bg-warning text-white" >
                                         <i class="uil uil-exclamation fs-4"></i>  
@@ -40,7 +40,7 @@
                             </div>
                            
                             
-                            <div  class=" mt-4 align-items-center">
+                            <div  class=" mt-4 align-items-center" v-if="!store.user.isAdmin">
                                 <a class=" row align-items-center  rounded shadow  p-3">
                                     <div v-for="item in btnLinkItems" :key="item" class="d-flex align-items-center justify-content-center col">
                                       
@@ -57,7 +57,10 @@
                            
                         </div><!--end row-->
 
-                        <div class="row  align-items-center mx-1">
+ 
+                        <UsersList v-if="store.user.isAdmin" />
+
+                        <div class="row  align-items-center mx-1" v-if="!store.user.isAdmin">
                            
                             
                             <div  class=" mt-4 align-items-center bg-color rounded">

@@ -8,6 +8,7 @@ export default defineNuxtConfig({
   modules: [
     // ...
     '@pinia/nuxt',
+    '@pinia-plugin-persistedstate/nuxt',
     '@vueuse/nuxt',
   ],
  
@@ -16,7 +17,7 @@ export default defineNuxtConfig({
   css: [
     // '@/assets/css/bootstrap-dark.min.css',
     // '@/assets/css/icons.css',
-    // '@/assets/css/style-dark.css',
+     // '@/assets/css/style-dark.css',
     // '@/assets/css/style-dark.css',
     
 

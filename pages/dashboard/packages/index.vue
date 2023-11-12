@@ -40,29 +40,29 @@
                                     <div class="col-lg-4 col-md-6 col-12 mt-4 pt-2" v-for="item in assetPlan">
                                         <div 
                                         class="card pricing pricing-primary business-rate shadow border-0 rounded">
-                                            <div  v-if="item.title==='premium'"
+                                            <div  v-if="item.name==='premium'"
                                             class="ribbon ribbon-right ribbon-warning overflow-hidden"><span class="text-center d-block shadow small h6">Best</span></div>
                                             <div class="card-body">
-                                                <h6 class="title name  text-uppercase mb-4">{{item.title}}</h6>
+                                                <h6 class="title name  text-uppercase mb-4">{{item.name}}</h6>
                                                 
                                                 <div  class="d-flex mb-4">
-                                                        <span v-for="i in item.icon" class="h1 mb-0 text-warning">
+                                                        <span v-for="i in 4" class="h1 mb-0 text-warning">
                                                             <i  class="uil uil-star "></i>
                                                         </span>
                                                 </div>
                 
                                                 <ul class="list-unstyled d-flex mb-0 ps-0">
                                                     <li class="h6 text-muted mb-0"><span class="icon h5 me-2">
-                                                        </span>${{item.price1}}</li>
+                                                        </span>${{item.maxPrice}}</li>
                                                     <li class="h6 text-muted mb-0"><span class="icon h5 me-2">
                                                         </span>-</li>
                                                     <li class="h6 text-muted mb-0"><span class="icon h5 me-2">
-                                                        </span>${{item.price2}}</li>
+                                                        </span>${{item.minPrice}}</li>
                                                 </ul>
                 
                                                 <ul class="list-unstyled d-flex mb-0 ps-0">
                                                     <li class="h6 text-muted mb-0"><span class="icon h5 me-2">
-                                                        </span>{{item.interest}}%</li>
+                                                        </span>{{item.returnOfInvestment}}%</li>
                                                     <li class="h6 text-muted mb-0"><span class="icon h5 me-2">
                                                         </span>ROI</li>
                                                     <li class="h6 text-muted mb-0"><span class="icon h5 me-2">
@@ -71,7 +71,7 @@
                 
                 
                                                
-                                                <nuxt-link :to="`/dashboard/packages/${item.id}`" href="javascript:void(0)" class="btn btn-primary mt-4">
+                                                <nuxt-link :to="`/dashboard/packages/${item._id}`"  class="btn btn-primary mt-4">
                                                     Edit plan
                                                 </nuxt-link>
                                             </div>
@@ -91,7 +91,7 @@
                     </div>
                 </div><!--end container-->
 
-                <footer2/>
+                <!-- <footer2/> -->
                 <!-- End -->
             </main>
             <!--End page-content" -->
@@ -107,35 +107,23 @@ definePageMeta({
     layout:"custom"
 })
 
+import {useStore}  from "@/stores/index";
+import {baseURL} from "@/composables/mixins";
 
-const assetPlan = [
-    {
-        id:"premium",
-        title: "premium",
-        price1: 50000,
-        price2 : 100000,
-        interest: 10,
-        icon:5,
+const pinia = useStore()
 
+const data = await fetch(`${baseURL}/package/packages-list`,{
+   method: "GET",
+   headers: {
+        "Content-Type":"application/json"
     },
-    {
-        id: "deluxe",
-        title: "deluxe",
-        price1: 10000,
-        price2 : 49999,
-        interest: 7.5,
-        icon:3
+}).then(res=>res.json());
 
-    },
-    {
-        id:"standard",
-        title: "standard",
-        price1: 1000,
-        price2 : 9999,
-        interest: 5,
-        icon:2
+const packageInfo =  data.data.packages;
+pinia.storePackage(packageInfo);
 
-    }   
-]
+const assetPlan = pinia.packages
+
+
 
 </script>
